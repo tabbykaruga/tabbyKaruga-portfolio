@@ -1,13 +1,12 @@
 import { Navbar, Container, Nav } from "react-bootstrap";
 import { useEffect, useState } from "react";
 import logo from "../assets/img/logo.svg";
-import navIcon1 from "../assets/img/nav-icon1.svg";
-import navIcon2 from "../assets/img/nav-icon2.svg";
-import navIcon3 from "../assets/img/nav-icon3.svg";
+import github from "../assets/img/githubLogo.svg";
+import linkedIn from "../assets/img/linkedInLogo.svg";
 
-export const NavBar = () => {
-  const { activeLink, setActiveLink } = useState("home");
-  const { scrolled, setScrolled } = useState(false);
+export default function NavBar() {
+  const [activeLink, setActiveLink] = useState("home");
+  const [scrolled, setScrolled] = useState(false);
 
   //triggered when scrolling starts
   useEffect(() => {
@@ -22,6 +21,7 @@ export const NavBar = () => {
 
     //remove when the components is removed from dom
     return () => window.removeEventListener("scroll", onScroll);
+    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, []);
 
   const onUpdateActiveLink = (value) => {
@@ -66,36 +66,22 @@ export const NavBar = () => {
             >
               Projects
             </Nav.Link>
-            {/* <NavDropdown title="Dropdown" id="basic-nav-dropdown">
-              <NavDropdown.Item href="#action/3.1">Action</NavDropdown.Item>
-              <NavDropdown.Item href="#action/3.2">
-                Another action
-              </NavDropdown.Item>
-              <NavDropdown.Item href="#action/3.3">Something</NavDropdown.Item>
-              <NavDropdown.Divider />
-              <NavDropdown.Item href="#action/3.4">
-                Separated link
-              </NavDropdown.Item>
-            </NavDropdown> */}
           </Nav>
           <span className="navbar-text">
             <div className="social-icon">
               <a href="https://github.com/tabbykaruga">
-                <img src={navIcon1} alt="GitHub" />
+                <img src={github} alt="GitHub" />
               </a>
               <a href="https://www.linkedin.com/in/tabitha-karuga-099200199/">
-                <img src={navIcon2} alt="LinkedIn" />
-              </a>
-              <a href="">
-                <img src={navIcon3} alt="" />
+                <img src={linkedIn} alt="LinkedIn" />
               </a>
             </div>
             <button className="vvd" onClick={() => console.log("contact me")}>
-              <span>Let`s Connect</span>
+              <span>Let's Connect</span>
             </button>
           </span>
         </Navbar.Collapse>
       </Container>
     </Navbar>
   );
-};
+}
