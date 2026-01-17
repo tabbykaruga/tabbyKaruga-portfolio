@@ -1,5 +1,4 @@
 import { Col, Container, Row } from "react-bootstrap";
-import logo from "../assets/img/logo.svg";
 import github from "../assets/img/githubLogo.svg";
 import linkedIn from "../assets/img/linkedInLogo.svg";
 
@@ -8,10 +7,14 @@ export default function Footer() {
     <footer className="footer">
       <Container>
         <Row className="align-items-center">
-          <Col size={12} sm={6}>
-            <img src={logo} alt="logo" />
+          <Col className="mb-4 mb-sm-0">
+            <p>Tabitha Muthoni Karuga</p>
+            <p>Software Engineer</p>
+            <a href="mailto:karugatabithamuthoni@gmail.com" className="">
+              karugatabithamuthoni@gmail.com
+            </a>
           </Col>
-          <Col size={12} sm={6} className="text-center text-sm-end">
+          <Col className="text-center text-sm-end">
             <div className="social-icon">
               <a href="https://github.com/tabbykaruga">
                 <img src={github} alt="GitHub" />

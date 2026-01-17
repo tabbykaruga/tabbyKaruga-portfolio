@@ -10,12 +10,7 @@ export default function Banner() {
   const [loopRolesNum, setLoopRolesNum] = useState(0);
   //Controls whether text is being typed or deleted.
   const [isDeleting, setIsDeleteing] = useState(false);
-  const toRotate = [
-    "Software Engineer",
-    "Web Developer",
-    "Mobile Developer",
-    "UI/UX Designer",
-  ];
+  const toRotate = ["Software Engineer", "Mobile Developer", "Web Developer"];
   const [roles, setRoles] = useState("");
   //Controls typing speed (interval time in milliseconds).
   const [delta, setDelta] = useState(300 - Math.random() * 100);
@@ -82,7 +77,7 @@ export default function Banner() {
                   </p>
                   <button onClick={() => console.log("connect")}>
                     Let's connect
-                    <ArrowRightCircle size={25} />
+                    <ArrowRightCircle size={28} />
                   </button>
                 </div>
               )}

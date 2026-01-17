@@ -1,6 +1,5 @@
 import { Navbar, Container, Nav } from "react-bootstrap";
 import { useEffect, useState } from "react";
-import logo from "../assets/img/logo.svg";
 import github from "../assets/img/githubLogo.svg";
 import linkedIn from "../assets/img/linkedInLogo.svg";
 
@@ -31,9 +30,6 @@ export default function NavBar() {
   return (
     <Navbar expand="lg" className={scrolled ? "scrolled" : ""}>
       <Container>
-        <Navbar.Brand href="#home">
-          <img src={logo} alt="Logo" />
-        </Navbar.Brand>
         <Navbar.Toggle aria-controls="basic-navbar-nav">
           <span className="navbar-toggler-icon"></span>
         </Navbar.Toggle>
@@ -66,21 +62,27 @@ export default function NavBar() {
             >
               Projects
             </Nav.Link>
+            <Nav.Link
+              href="#contactMe"
+              className={
+                activeLink === "contactMe"
+                  ? "active navbar-link"
+                  : "navbar-link"
+              }
+              onClick={() => onUpdateActiveLink("contactMe")}
+            >
+              Contact Me
+            </Nav.Link>
           </Nav>
-          <span className="navbar-text">
-            <div className="social-icon">
-              <a href="https://github.com/tabbykaruga">
-                <img src={github} alt="GitHub" />
-              </a>
-              <a href="https://www.linkedin.com/in/tabitha-karuga-099200199/">
-                <img src={linkedIn} alt="LinkedIn" />
-              </a>
-            </div>
-            <button className="vvd" onClick={() => console.log("contact me")}>
-              <span>Let's Connect</span>
-            </button>
-          </span>
         </Navbar.Collapse>
+        <div className="social-icon">
+          <a href="https://github.com/tabbykaruga">
+            <img src={github} alt="GitHub" />
+          </a>
+          <a href="https://www.linkedin.com/in/tabitha-karuga-099200199/">
+            <img src={linkedIn} alt="LinkedIn" />
+          </a>
+        </div>
       </Container>
     </Navbar>
   );
