@@ -68,7 +68,7 @@ export default function Projects() {
                   <Nav.Link eventKey="first">Mobile Apps</Nav.Link>
                 </Nav.Item>
                 <Nav.Item>
-                  <Nav.Link eventKey="second">Web Apps</Nav.Link>
+                  <Nav.Link eventKey="second">Web App/Websites</Nav.Link>
                 </Nav.Item>
               </Nav>
               <Tab.Content>
