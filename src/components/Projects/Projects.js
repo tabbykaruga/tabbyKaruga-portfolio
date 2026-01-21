@@ -9,6 +9,18 @@ import investorApp from "../../assets/img/projects/investor_calculator.png";
 import portfolio from "../../assets/img/projects/portfolio.png";
 import colorSharpRight from "../../assets/img/color-sharp-right.png";
 
+// npm install react-multi-carousel
+ 
+// npm install react-bootstrap-icons --save
+ 
+// npm install express cors nodemailer
+ 
+// npm server to start the mail server file
+ 
+// npm install animate.css --save
+ 
+// npm install --save react-on-screen
+ 
 export default function Projects() {
   const mobileProjects = [
     {
