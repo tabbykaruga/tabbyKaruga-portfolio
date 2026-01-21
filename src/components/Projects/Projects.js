@@ -1,12 +1,12 @@
 import { Col, Container, Row, Nav, TabContainer, Tab } from "react-bootstrap";
 import WebCard from "./WebCard";
 import MobileCard from "./MobileCard";
-import proj1 from "../../assets/img/project-img1.png";
-import smartAccess from "../../assets/img/smartAccess.jpg";
-import gabsApp from "../../assets/img/GABS.jpg";
-import gwFaApp from "../../assets/img/GWFA.jpg";
-import ticTacToe from "../../assets/img/tic-tac-toe.png";
-import investorApp from "../../assets/img/invester-web.png";
+import smartAccess from "../../assets/img/projects/smartAccess.png";
+import gabsApp from "../../assets/img/projects/gabs.png";
+import gwFaApp from "../../assets/img/projects/gwfa.png";
+import ticTacToe from "../../assets/img/projects/tic-tac-toe.png";
+import investorApp from "../../assets/img/projects/investor_calculator.png";
+import portfolio from "../../assets/img/projects/portfolio.png";
 import colorSharpRight from "../../assets/img/color-sharp-right.png";
 
 export default function Projects() {
@@ -44,7 +44,7 @@ export default function Projects() {
     {
       title: "Portfolio",
       description: "The current website your see all the projects",
-      imgUrl: proj1,
+      imgUrl: portfolio,
     },
   ];
   return (
@@ -74,9 +74,7 @@ export default function Projects() {
               <Tab.Content>
                 <Tab.Pane eventKey="first">
                   <Row>
-                    {mobileProjects.map((project, index) => {
-                      return <MobileCard key={index} {...project} />;
-                    })}
+                    <MobileCard projects={mobileProjects}></MobileCard>
                   </Row>
                 </Tab.Pane>
                 <Tab.Pane eventKey="second">

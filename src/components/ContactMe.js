@@ -62,7 +62,7 @@ export default function ContactMe() {
                   type="text"
                   value={formDetails.firstName}
                   placeholder="First Name"
-                  onChange={(e) => onFormUpdate("FirstName", e.target.value)}
+                  onChange={(e) => onFormUpdate("firstName", e.target.value)}
                 />
                 <Col sm={6} className="px-1"></Col>
                 <input

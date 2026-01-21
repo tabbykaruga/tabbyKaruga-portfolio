@@ -124,7 +124,7 @@ export default function Skills() {
                 {skills.map((skill, index) => (
                   <div className="item">
                     <img src={skill.img} alt="" />
-                    <h6>{skill.name}</h6>
+                    <p>{skill.name}</p>
                   </div>
                 ))}
               </Carousel>
