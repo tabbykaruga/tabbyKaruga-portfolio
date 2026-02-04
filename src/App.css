@@ -1,21 +1,4 @@
 /************ Custom Font ************/
-
-/* @font-face {
-	font-family: Centra;
-	src: url('./assets/font/CentraNo2-Bold.ttf');
-	font-weight: 700;
-}
-@font-face {
-	font-family: Centra;
-	src: url('./assets/font/CentraNo2-Medium.ttf');
-	font-weight: 500;
-}
-@font-face {
-	font-family: Centra;
-	src: url('./assets/font/CentraNo2-Book.ttf');
-	font-weight: 400;
-} */
-
 @font-face {
   font-family: 'Playfair Display';
   src: url('./assets/font/PlayfairDisplay-Regular.ttf') format('truetype');
@@ -67,11 +50,11 @@ body {
   position: relative;
   background-color: #121212 !important;
   color: #fff !important;
-  font-family: 'Inter', sans-serif;
+  font-family: 'Playfair Display', serif;
 }
 
 h1, h2, h3, h4, h5, h6 {
-  font-family: 'Playfair Display', serif;
+  font-family: 'Inter', sans-serif;
   margin: 0;
   padding: 0;
   line-height: normal;
@@ -361,17 +344,19 @@ nav.navbar .navbar-toggler[aria-expanded="true"] .navbar-toggler-icon {
   position: relative;
 }
 .skill-bx {
-  background: #151515;
+  /* background: #151515; */
   border-radius: 48px;
   text-align: center;
-  padding: 40px 50px;
-  margin-top: -40px;
+  padding: 30px 80px;
+  /* margin-top: -40px; */
+  margin-bottom: 60px;
   overflow: hidden;
 }
 .skill h2 {
-	font-size: 45px;
-	font-weight: 600;
+	font-size: 65px;
+	font-weight: 700;
   text-align: center;
+  
 }
 .skill p {
     color: #B8B8B8;;
@@ -379,17 +364,19 @@ nav.navbar .navbar-toggler[aria-expanded="true"] .navbar-toggler-icon {
     letter-spacing: 0.8px;
     line-height: 1.5em;
     margin: 14px 0 75px 0;
+    text-align: center;
 }
 .skill-slider {
   width: 100%;
   margin: 0 auto;
   position: relative;
-  padding-bottom: 20px;
+  padding-bottom: 10px;
 }
 .skill-slider .item {
   border: 2px solid #9b59b6;
   border-radius: 40px;        
-  padding-top: 30%;    
+  padding-top: 30%;
+    
   margin: 10px;               
   background: rgba(255, 255, 255, 0.05); 
   text-align: center;
@@ -408,48 +395,191 @@ nav.navbar .navbar-toggler[aria-expanded="true"] .navbar-toggler-icon {
   width: 40%;
   margin-bottom: 10px;
 }
-.background-image-left {
-  top: 28%;
-  position: absolute;
-  bottom: 0;
-  width: 40%;
-  z-index: -4;
-}
+
 
 /************ Projects CSS ************/
 .project {
-  padding: 80px 0;
+  padding: 70px 0px;
   position: relative;
-  background-color: black;
+  overflow: hidden; 
 }
-
 .project h2 {
-  font-size: 45px;
+  font-size: 65px;
   font-weight: 700;
-  text-align: center;
 }
-
-.project p {
+.project-p {
   color: #B8B8B8;
   font-size: 18px;
   letter-spacing: 0.8px;
   line-height: 1.5em;
-  margin: 14px auto 30px auto;
+  text-align: left; 
+  padding-bottom: 15px;
+  padding-top: 15px;
+}
+.project-bx {
   text-align: center;
-  width: 56%;
+  margin-top: 40px;
+  overflow: hidden;
+  padding: 0px 65px;
+}
+.section-title {
+  font-size: 42px;
+  margin-bottom: 50px;
+  font-weight: 600;
+}
+.projects-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 30px;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+.project-card {
+  background: rgba(255,255,255,0.02);
+  border: 1px solid #9b59b6;
+  border-radius: 20px;
+  padding: 25px;
+  backdrop-filter: blur(10px);
+  box-shadow: 0 0 25px rgba(155,89,182,0.1);
+  transition: 0.3s;
+  text-align: left;
+}
+.project-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 0 35px #9b59b6;
+}
+.project-logo {
+  width: 100px;
+  height: 100px;
+  border-radius: 4px;
+  border: 1px solid #9b59b6;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 15px;
+}
+.project-logo img {
+  width: 70%;
+  height: 70%;
+  object-fit: contain;
+}
+.project-card h3 {
+  font-size: 18px;
+  margin-bottom: 10px;
+}
+.project-desc {
+  font-size: 16px;
+  color: #B8B8B8;
+  line-height: 1.5;
+  margin-bottom: 15px;
+}
+.stack-tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin-bottom: 15px;
+}
+.stack-tags span {
+  font-size: 11px;
+  padding: 5px 10px;
+  border-radius: 20px;
+  border: 1px solid rgba(155,89,182,0.6);
+  color: #cfa7ff;
+}
+.project-actions {
+  display: flex;
+  gap: 12px;
+}
+.project-actions a {
+  text-decoration: none;
+  font-size: 12px;
+  padding: 6px 12px;
+  border-radius: 8px;
+  border: 1px solid #9b59b6;
+  color: #fff;
+  transition: 0.3s;
+}
+
+.project-actions a:hover {
+  background: #9b59b6;
+  box-shadow: 0 0 12px #9b59b6;
+}
+/* Nav Pills */
+.project .nav.nav-pills {
+  width: 72%;
+  margin: 0 auto;
+  border-radius: 50px;
+  background-color: rgba(255, 255, 255, 0.1);
+  overflow: hidden;
+  display: flex;
+}
+
+.project .nav.nav-pills .nav-item {
+  width: 50%;
+}
+.project .nav.nav-pills .nav-link {
+  background-color: transparent;
+  border-radius: 0;
+  padding: 17px 0;
+  color: #fff;
+  width: 100%;
+  font-size: 17px;
+  letter-spacing: 0.8px;
+  font-weight: 500;
+  position: relative;
+  text-align: center;
+  transition: 0.3s ease-in-out;
+  z-index: 0;
+  border: none;
+}
+
+/* Gradient effect for active tab */
+.project .nav.nav-pills .nav-link::before {
+  content: "";
+  position: absolute;
+  width: 0;
+  height: 100%;
+  top: 0;
+  left: 0;
+  z-index: -1;
+  background: linear-gradient(90.21deg, #AA367C -5.91%, #4A2FBD 111.58%);
+  transition: 0.3s ease-in-out;
+}
+
+.project .nav.nav-pills .nav-link.active::before {
+  width: 100% !important;
+}
+
+/* Borders for active tab */
+.project .nav.nav-pills .nav-link.active {
+  border: 1px solid rgba(255, 255, 255, 1);
+}
+
+/* First tab styling */
+.nav-link#projects-tabs-tab-first {
+  border: 1px solid rgba(255, 255, 255, 0.5);
+  border-radius: 55px 0 0 55px;
+}
+
+/* Second tab styling */
+.nav-link#projects-tabs-tab-second {
+  border: 1px solid rgba(255, 255, 255, 0.5);
+  border-left: none;
+  /* remove double border */
+  border-radius: 0 55px 55px 0;
 }
 
 /************ Experience CSS ************/
 .experience-bx {
   text-align: center;
-  margin-top: 20px;
+  margin-top: 40px;
   overflow: hidden;
 }
 .experience h2 {
-	font-size: 45px;
-	font-weight: 600;
+	font-size: 65px;
+	font-weight: 700;
   text-align: center;
-  padding-bottom: 30px;
+  padding-bottom: 40px;
 }
 .experience .vertical-timeline-element-content  h3 {
 	font-size: 30px;
@@ -491,218 +621,7 @@ nav.navbar .navbar-toggler[aria-expanded="true"] .navbar-toggler-icon {
   background: rgba(255, 255, 255, 0.2) !important;
 }
 
-
-/* Nav Pills */
-.project .nav.nav-pills {
-  width: 72%;
-  margin: 0 auto;
-  border-radius: 50px;
-  background-color: rgba(255, 255, 255, 0.1);
-  overflow: hidden;
-  display: flex;
-}
-
-.project .nav.nav-pills .nav-item {
-  width: 50%;
-  /* two tabs */
-}
-
-.project .nav.nav-pills .nav-link {
-  background-color: transparent;
-  border-radius: 0;
-  padding: 17px 0;
-  color: #fff;
-  width: 100%;
-  font-size: 17px;
-  letter-spacing: 0.8px;
-  font-weight: 500;
-  position: relative;
-  text-align: center;
-  transition: 0.3s ease-in-out;
-  z-index: 0;
-  border: none;
-  /* remove default border */
-}
-
-/* Gradient effect for active tab */
-.project .nav.nav-pills .nav-link::before {
-  content: "";
-  position: absolute;
-  width: 0;
-  height: 100%;
-  top: 0;
-  left: 0;
-  z-index: -1;
-  background: linear-gradient(90.21deg, #AA367C -5.91%, #4A2FBD 111.58%);
-  transition: 0.3s ease-in-out;
-}
-
-.project .nav.nav-pills .nav-link.active::before {
-  width: 100% !important;
-}
-
-/* Borders for active tab */
-.project .nav.nav-pills .nav-link.active {
-  border: 1px solid rgba(255, 255, 255, 1);
-}
-
-/* First tab styling */
-.nav-link#projects-tabs-tab-first {
-  border: 1px solid rgba(255, 255, 255, 0.5);
-  border-radius: 55px 0 0 55px;
-}
-
-/* Second tab styling */
-.nav-link#projects-tabs-tab-second {
-  border: 1px solid rgba(255, 255, 255, 0.5);
-  border-left: none;
-  /* remove double border */
-  border-radius: 0 55px 55px 0;
-}
-
-/* mobile Project cards */
-.mobile-spotlight {
-  display: flex;
-  align-items: center;
-  gap: 40px;
-}
-
-@media (max-width: 768px) {
-  .mobile-spotlight {
-    flex-direction: column;
-    align-items: center;
-    gap: 20px;
-  }
-
-  .mobile-thumbnails {
-    display: flex;
-    justify-content: center;
-    gap: 15px;
-    overflow-x: auto;
-    /* allow scrolling if there are many images */
-    padding-bottom: 10px;
-  }
-
-  .mobile-details {
-    max-width: 90%;
-    text-align: center;
-    opacity: 1;
-    transform: translateX(0);
-    transition: none;
-  }
-
-  .project-links a {
-    margin: 0 8px;
-  }
-}
-.thumbnail {
-  width: 180px;
-  aspect-ratio: 4 / 8;
-  border-radius: 26px;
-  overflow: hidden;
-  cursor: pointer;
-  opacity: 0.6;
-  transform: scale(0.9);
-  transition: 0.4s ease;
-}
-
-.thumbnail img {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-}
-
-.thumbnail.active {
-  opacity: 1;
-  transform: scale(1.05);
-}
-.mobile-spotlight:has(.thumbnail.active) .mobile-thumbnails {
-  transform: translateX(-120px);
-}
-
-.mobile-details.show {
-  opacity: 1;
-  transform: translateX(0);
-}
-/* .proj-mobilebx, */
-.proj-imgbx {
-  position: relative;
-  border-radius: 30px;
-  overflow: hidden;
-  width: 100%;
-  margin-bottom: 24px;
-}
-
-/* .proj-mobilebx {
-  aspect-ratio: 9 / 19;
-} */
-
-.proj-imgbx {
-  aspect-ratio: 10 / 18;
-}
-
-/* Gradient overlay */
-/* .proj-mobilebx::before, */
-.proj-imgbx::before {
-  content: "";
-  position: absolute;
-  width: 100%;
-  height: 0;
-  top: 0;
-  left: 0;
-  opacity: 0.85;
-  background: linear-gradient(90.21deg, #AA367C -5.91%, #4A2FBD 111.58%);
-  transition: 0.4s ease-in-out;
-}
-
-/* .proj-mobilebx:hover::before, */
-.proj-imgbx:hover::before {
-  height: 100%;
-}
-
-/* Text overlay */
-.proj-txtx {
-  position: absolute;
-  top: 65%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  width: 100%;
-  text-align: center;
-  opacity: 0;
-  transition: 0.5s ease-in-out;
-}
-
-/* .proj-mobilebx:hover .proj-txtx, */
-.proj-imgbx:hover .proj-txtx {
-  top: 50%;
-  opacity: 1;
-}
-
-.proj-txtx h4 {
-  font-size: 30px;
-  font-weight: 700;
-  letter-spacing: 0.8px;
-  line-height: 1.1em;
-}
-
-.proj-txtx span {
-  font-style: italic;
-  font-weight: 400;
-  font-size: 15px;
-  letter-spacing: 0.8px;
-}
-
-/* Background image */
-.background-image-right {
-  position: absolute;
-  top: 20%;
-  right: 0;
-  bottom: 0;
-  width: 35%;
-  z-index: -4;
-}
-
-/************ Projects Css ************/
+/************ Contact Us CSS ************/
 .contact {
   background: linear-gradient(90.21deg, #AA367C -5.91%, #4A2FBD 111.58%);
   padding: 60px 0 200px 0;
@@ -806,4 +725,17 @@ nav.navbar .navbar-toggler[aria-expanded="true"] .navbar-toggler-icon {
   border:  10px solid #fff;
   background-color: white;
 }
-
+.background-image-right {
+  position: absolute;
+  top: 15%;
+  bottom:0p;
+  width: 100%;
+  z-index: -4;
+}
+.background-image-left {
+  top: 15%;
+  position: absolute;
+  bottom: 0;
+  width: 90%;
+  z-index: -4;
+}

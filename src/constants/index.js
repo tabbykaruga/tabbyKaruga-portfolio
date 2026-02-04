@@ -14,7 +14,12 @@ import figma from "../assets/img/skills/Figma.png";
 import androidStudio from "../assets/img/skills/androidStudio.png";
 import vsCode from "../assets/img/skills/vsCode.png";
 import smartApplicationLogo from "../assets/img/icons/smart_logo.jpg";
+import gwfaLogo from "../assets/img/icons/gwfa_logo.png";
 import softclansLogo from "../assets/img/icons/softclans_logo.jpg";
+import gabsLogo from "../assets/img/icons/gabslogos.jpeg";
+import ticTacToe from "../assets/img/projects/tic-tac-toe.png";
+import investorApp from "../assets/img/projects/investor_calculator.png";
+import portfolio from "../assets/img/projects/portfolio.png";
 
 export const navLinks = [
   {
@@ -135,77 +140,46 @@ export const myExperiences = [
   },
 ];
 
-// export const projects = [
-//   {
-//     name: "WeatherPedia",
-//     description:
-//       "Web-based platform that allows users to access weather information for their location by entering it in the search field",
-//     tags: [
-//       { name: "Javascript", color: "blue-text-gradient" },
-//       { name: "HTML", color: "green-text-gradient" },
-//       { name: "bootstrap 5.3.0", color: "pink-text-gradient" },
-//       { name: "Weather API by API Ninjas", color: "yellow-text-gradient" },
-//     ],
-//     image: weatherpedia,
-//     source_code_link: "https://github.com/lohitkolluri/WeatherPedia",
-//   },
-//   {
-//     name: "Terminal Like Portfolio Website",
-//     description:
-//       "A terminal themed portfolio website that allows users to type into the terminal and use commands like a real terminal.",
-//     tags: [
-//       { name: "HTML", color: "blue-text-gradient" },
-//       { name: "css", color: "green-text-gradient" },
-//       { name: "Javascript", color: "pink-text-gradient" },
-//     ],
-//     image: termpw,
-//     source_code_link: "https://github.com/lohitkolluri/lohitkolluri.github.io",
-//   },
-//   {
-//     name: "Mental Health Fitness Tracker",
-//     description:
-//       "ML model that utilizes regression techniques to provide insights into mental health and make predictions based on the available data.",
-//     tags: [
-//       { name: "Machine Learning", color: "blue-text-gradient" },
-//       { name: "Jupyter Notebook", color: "green-text-gradient" },
-//       { name: "Regression Algorithms", color: "pink-text-gradient" },
-//     ],
-//     image: mhft,
-//     source_code_link:
-//       "https://github.com/lohitkolluri/mental_health_fitness_tracker",
-//   },
-//   {
-//     name: "PayloadMaster",
-//     description:
-//       "Tool to automate payload creation using the Metasploit framework",
-//     tags: [{ name: "shell", color: "blue-text-gradient" }],
-//     image: payloadmaster,
-//     source_code_link: "https://github.com/lohitkolluri/PayloadMaster",
-//   },
-//   {
-//     name: "CompileVortex",
-//     description:
-//       "Tool to automate payload creation using the Metasploit framework",
-//     tags: [
-//       { name: "Javascript", color: "blue-text-gradient" },
-//       { name: "CSS", color: "green-text-gradient" },
-//       { name: "HTML", color: "pink-text-gradient" },
-//     ],
-//     image: CompileVortex,
-//     source_code_link: "https://github.com/lohitkolluri/CompileVortex",
-//   },
-//   {
-//     name: "Sketcher",
-//     description:
-//       "Convert an input image to a pencil sketch using OpenCV and Matplotlib libraries.",
-//     tags: [
-//       { name: "OpenCV", color: "blue-text-gradient" },
-//       { name: "Matplotlib", color: "green-text-gradient" },
-//       { name: "Python", color: "pink-text-gradient" },
-//     ],
+export const mobileProjects = [
+  {
+    name: "Smart Access",
+    description:
+      "A cutting-edge mobile applications for the healthcare sector, focusing on delivering seamless user experiences and scalable solutions.",
+    logo: smartApplicationLogo,
+    stack: ["Flutter", "Dart", "Firebase", "Google Sign-In"],
+    link: "https://www.linkedin.com/in/tabitha-karuga-099200199/details/experience/",
+  },
+  {
+    name: "GABS",
+    description:
+      "Garbage collection App thats helps find the nearest private garbage collectors near them based on their location.",
+    logo: gabsLogo,
+    stack: ["Java", "Firebase", "Google Sign-In"],
+    link: "https://www.linkedin.com/in/tabitha-karuga-099200199/details/experience/",
+  },
+  {
+    name: "Global Women Fitness App",
+    description: "A workout app forcused on women and diffrent excersises.",
+    logo: gwfaLogo,
+    stack: ["Flutter", "Dart", "Firebase", "Google Sign-In"],
+    link: "https://www.linkedin.com/in/tabitha-karuga-099200199/details/experience/",
+  },
+];
 
-//     image: sketcher,
-//     source_code_link:
-//       "https://github.com/lohitkolluri/Image_to_Pencil_Sketch_App",
+// export const webAppProjects = [
+//   {
+//     title: "Tic Tac Toe Game",
+//     description: "A website with the game of tic tac toe.",
+//     imgUrl: ticTacToe,
+//   },
+//   {
+//     title: "Investor Web App",
+//     description: "A website thats helps you caculate the diffrent.",
+//     imgUrl: investorApp,
+//   },
+//   {
+//     title: "Portfolio",
+//     description: "The current website your see all the projects",
+//     imgUrl: portfolio,
 //   },
 // ];

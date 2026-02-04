@@ -7,6 +7,8 @@ import {
 
 import "react-vertical-timeline-component/style.min.css";
 import { motion } from "framer-motion";
+import colorSharpRight from "../assets/img/color-sharp-right.png";
+import colorSharpLeft from "../assets/img/color-sharp-left.png";
 
 export default function Experiences() {
   return (
@@ -17,7 +19,7 @@ export default function Experiences() {
             <div>
               <h2>Work Experience</h2>
               <VerticalTimeline>
-                {myExperiences.map((el,index) => {
+                {myExperiences.map((el, index) => {
                   return (
                     <VerticalTimelineElement
                       key={el.id}
@@ -65,6 +67,16 @@ export default function Experiences() {
           </Col>
         </Row>
       </Container>
+      <img
+        className="background-image-left"
+        src={colorSharpLeft}
+        alt="BackgroundImageLeft"
+      />
+      <img
+        className="background-image-right"
+        src={colorSharpRight}
+        alt="BackgroundImageRight"
+      />
     </section>
   );
 }
