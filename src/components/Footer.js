@@ -13,6 +13,13 @@ export default function Footer() {
             <a href="mailto:karugatabithamuthoni@gmail.com" className="">
               karugatabithamuthoni@gmail.com
             </a>
+            <p>
+              <a href="/TabithaKarugaCV.pdf" download>
+                <button className="footer-btn">
+                  <span>Download CV</span>
+                </button>
+              </a>
+            </p>
           </Col>
           <Col className="text-center text-sm-end">
             <div className="social-icon">

@@ -6,15 +6,27 @@ import Skills from "./components/Skills";
 import Projects from "./components/Projects/Projects";
 import ContactMe from "./components/ContactMe";
 import Footer from "./components/Footer";
+import Experiences from "./components/Experience";
 
 function App() {
   return (
     <div className="App">
       <NavBar />
-      <Banner />
-      <Skills />
-      <Projects />
-      <ContactMe />
+      <section id="home">
+        <Banner />
+      </section>
+      <section id="skills">
+        <Skills />
+      </section>
+      <section id="experience">
+        <Experiences />
+      </section>
+      <section id="projects">
+        <Projects />
+      </section>
+      <section id="contactMe">
+        <ContactMe />
+      </section>
       <Footer />
     </div>
   );

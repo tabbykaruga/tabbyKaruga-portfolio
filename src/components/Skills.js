@@ -1,22 +1,9 @@
 import { Container, Row, Col } from "react-bootstrap";
 import Carousel from "react-multi-carousel";
 import "react-multi-carousel/lib/styles.css";
-import react from "../assets/img/skills/react.png";
-import flutter from "../assets/img/skills/flutter.png";
-import kotlin from "../assets/img/skills/kotlin.png";
-import git from "../assets/img/skills/git.png";
-import css from "../assets/img/skills/css.png";
-import html from "../assets/img/skills/html.png";
-import java from "../assets/img/skills/java.png";
-import php from "../assets/img/skills/php.png";
-import laravel from "../assets/img/skills/laravel.png";
-import psql from "../assets/img/skills/psql.png";
-import mysql from "../assets/img/skills/mysql.png";
-import firebase from "../assets/img/skills/firebase.png";
-import figma from "../assets/img/skills/Figma.png";
-import androidStudio from "../assets/img/skills/androidStudio.png";
-import vsCode from "../assets/img/skills/vsCode.png";
 import colorSharpLeft from "../assets/img/color-sharp-left.png";
+import colorSharpRight from "../assets/img/color-sharp-right.png";
+import { skills } from "../constants";
 
 export default function Skills() {
   const responsive = {
@@ -38,68 +25,6 @@ export default function Skills() {
     },
   };
 
-  const skills = [
-    {
-      name: "Flutter",
-      img: flutter,
-    },
-    {
-      name: "Kotlin",
-      img: kotlin,
-    },
-    {
-      name: "Java",
-      img: java,
-    },
-    {
-      name: "React",
-      img: react,
-    },
-    {
-      name: "Laravel",
-      img: laravel,
-    },
-    {
-      name: "HTML",
-      img: html,
-    },
-    {
-      name: "CSS",
-      img: css,
-    },
-    {
-      name: "PHP",
-      img: php,
-    },
-    {
-      name: "Git",
-      img: git,
-    },
-    {
-      name: "MySQL",
-      img: mysql,
-    },
-    {
-      name: "PSQL",
-      img: psql,
-    },
-    {
-      name: "Firebase",
-      img: firebase,
-    },
-    {
-      name: "Figma",
-      img: figma,
-    },
-    {
-      name: "Android Studio",
-      img: androidStudio,
-    },
-    {
-      name: "Visual Studio",
-      img: vsCode,
-    },
-  ];
   return (
     <section className="skill" id="skill">
       <Container>
@@ -119,6 +44,7 @@ export default function Skills() {
                 autoPlay={true}
                 autoPlaySpeed={2000}
                 transitionDuration={500}
+                centerMode={true}
                 className="skill-slider"
               >
                 {skills.map((skill, index) => (
@@ -136,6 +62,11 @@ export default function Skills() {
         className="background-image-left"
         src={colorSharpLeft}
         alt="BackgroundImageLeft"
+      />
+      <img
+        className="background-image-right"
+        src={colorSharpRight}
+        alt="BackgroundImageRight"
       />
     </section>
   );

@@ -355,17 +355,17 @@ nav.navbar .navbar-toggler[aria-expanded="true"] .navbar-toggler-icon {
   border-right: 0.08em solid #666;
 }
 
-/************ Skills Css ************/
+/************ Skills CSS ************/
 .skill {
-  padding: 0 0 50px 0;
+  padding: 0 0 0px 0;
   position: relative;
 }
 .skill-bx {
   background: #151515;
-  border-radius: 64px;
+  border-radius: 48px;
   text-align: center;
-  padding: 60px 80px;
-  margin-top: -60px;
+  padding: 40px 50px;
+  margin-top: -40px;
   overflow: hidden;
 }
 .skill h2 {
@@ -384,11 +384,29 @@ nav.navbar .navbar-toggler[aria-expanded="true"] .navbar-toggler-icon {
   width: 100%;
   margin: 0 auto;
   position: relative;
+  padding-bottom: 20px;
 }
-
+.skill-slider .item {
+  border: 2px solid #9b59b6;
+  border-radius: 40px;        
+  padding-top: 30%;    
+  margin: 10px;               
+  background: rgba(255, 255, 255, 0.05); 
+  text-align: center;
+  transition: transform 0.3s, box-shadow 0.3s;
+    min-height: 150px;  
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+.skill-slider .item:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 0 20px #9b59b6;
+}
 .skill-slider .item img {
-  width: 50%;
-  margin: 0 auto 15px auto;
+  width: 40%;
+  margin-bottom: 10px;
 }
 .background-image-left {
   top: 28%;
@@ -398,7 +416,7 @@ nav.navbar .navbar-toggler[aria-expanded="true"] .navbar-toggler-icon {
   z-index: -4;
 }
 
-/************ Projects Css ************/
+/************ Projects CSS ************/
 .project {
   padding: 80px 0;
   position: relative;
@@ -420,6 +438,59 @@ nav.navbar .navbar-toggler[aria-expanded="true"] .navbar-toggler-icon {
   text-align: center;
   width: 56%;
 }
+
+/************ Experience CSS ************/
+.experience-bx {
+  text-align: center;
+  margin-top: 20px;
+  overflow: hidden;
+}
+.experience h2 {
+	font-size: 45px;
+	font-weight: 600;
+  text-align: center;
+  padding-bottom: 30px;
+}
+.experience .vertical-timeline-element-content  h3 {
+	font-size: 30px;
+	font-weight: 600;
+}
+.experience .vertical-timeline-element-content h4 {
+	font-size: 16px;
+	font-weight: 500;
+}
+.experience .vertical-timeline-element-content h5 {
+	font-size: 12px;
+	font-weight: 400;
+}
+.experience .vertical-timeline-element-content p {
+    color: #B8B8B8;
+    font-size: 16px;
+    font-weight: 200;
+    letter-spacing: 0.8px;
+    line-height: 1.5em;
+}
+.vertical-timeline-element-content {
+  background: rgba(255, 255, 255, 0.02) !important;
+  border: 1px solid rgba(255, 255, 255, 0.15);
+  backdrop-filter: blur(10px);
+  border-radius: 12px;
+}
+.vertical-timeline-element-content-arrow {
+  border-right: 7px solid rgba(255, 255, 255, 0.25) !important;
+}
+.vertical-timeline-element-title,
+.vertical-timeline-element-subtitle,
+.vertical-timeline-element-content p {
+  color: #fff !important;
+}
+.vertical-timeline-element-date {
+  color: #aaa !important;
+}
+.vertical-timeline::before {
+  background: rgba(255, 255, 255, 0.2) !important;
+}
+
 
 /* Nav Pills */
 .project .nav.nav-pills {
@@ -730,5 +801,9 @@ nav.navbar .navbar-toggler[aria-expanded="true"] .navbar-toggler-icon {
 }
 .footer img {
   width: 28%;
+}
+.footer button {
+  border:  10px solid #fff;
+  background-color: white;
 }
 
