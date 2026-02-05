@@ -102,15 +102,18 @@ export const skills = [
 export const myExperiences = [
   {
     id: 1,
-    title: "Software Engineer",
+    title: "Software Engineer I",
     company_name: "Smart Applications International Ltd",
     icon: smartApplicationLogo,
     location: "Nairobi, Kenya",
     date: "June 2024 - Present",
     description: [
-      "Acquired hands-on knowledge of AWS Cloud Foundation, delving into cloud infrastructure, services, and deployment.",
-      "also gaining a solid foundation in Machine Learning, covering topics like algorithms, data analysis, and model building.",
+      `Specializing in building scalable, cross-platform healthcare mobile applications using Flutter. Experienced in
+       BLoC state management, translating Figma designs into functional apps, connecting with backend services, and 
+       publishing to the Google Play Store. Skilled in creating intuitive, user-friendly experiences and collaborating 
+       via GitLab.`,
     ],
+    link: "https://play.google.com/store/apps/details?id=com.smart.smartaccess&pli=1",
   },
   {
     id: 2,
@@ -118,68 +121,90 @@ export const myExperiences = [
     company_name: "SoftClans Technologies Limited",
     location: "Nairobi, Kenya",
     icon: softclansLogo,
-    date: "Nov 2021 - June 2024",
+    date: "May 2022 - June 2024",
     description: [
-      "Completed virtual internship, gaining a strong foundation in MATLAB, including data analysis and processing.",
-      "Acquired practical skills in image and signal processing, including segmentation, batch processing, and spectral analysis.",
-      "Developed expertise in machine learning models for clustering, classification, and regression, and customized deep learning techniques for image classification.",
+      `Specializing in mobile and web development, building scalable cross-platform apps and dynamic web portals. 
+      Experienced in Agile workflows, Git version control, RESTful API integration, and applying MVC/MVVM architectures 
+      for maintainable, high-performing solutions.`,
     ],
   },
   {
     id: 3,
-    title: "Web Developer",
-    company_name: "WAYAAP",
-    icon: smartApplicationLogo,
+    title: "FullStack Software Developer -Intern",
+    company_name: "SoftClans Technologies Limited",
     location: "Nairobi, Kenya",
-    date: "Sept 2021 - Nov 2021",
+    icon: softclansLogo,
+    date: "Nov 2021 - Apr 2022",
     description: [
-      "Engineered a comprehensive Mental Health Fitness Tracker ML model utilizing Python and scikit-learn.",
-      "Maximized the model's performance by refining model parameters and employing ensemble methods, yielding an outstanding accuracy percentage of 98.50%.",
-      "Leveraged 12 regression algorithms to attain precise outcomes in analyzing and predicting mental fitness levels across 150+ countries.",
+      `Started as an Intern with hands-on experience in Flutter and Laravel, building scalable mobile and web applications. 
+     Skilled in Agile workflows, Git version control, MVC architecture, and documenting development processes for 
+     maintainable and efficient code.`,
     ],
   },
 ];
 
 export const mobileProjects = [
   {
-    name: "Smart Access",
-    description:
-      "A cutting-edge mobile applications for the healthcare sector, focusing on delivering seamless user experiences and scalable solutions.",
+    name: "Smart Access App",
+    description: `A digital healthcare access platform that enables instant onboarding, transparent medical cover visibility,
+     and secure cardless access to services for members, insurers, and providers.`,
     logo: smartApplicationLogo,
-    stack: ["Flutter", "Dart", "Firebase", "Google Sign-In"],
-    link: "https://www.linkedin.com/in/tabitha-karuga-099200199/details/experience/",
+    stack: [
+      "Flutter",
+      "BLoC Architecture",
+      "Firebase",
+      "UI/UX",
+      "API Intergration",
+      "Google Sign-In",
+    ],
+    link: "https://play.google.com/store/apps/details?id=com.smart.smartaccess&pli=1",
   },
   {
-    name: "GABS",
-    description:
-      "Garbage collection App thats helps find the nearest private garbage collectors near them based on their location.",
+    name: "GABS App",
+    description: `GABS App(Garbage Services App) is a location-based app that connects users to nearby private waste 
+    collectors using Google Maps integration for fast and reliable waste management services.`,
     logo: gabsLogo,
-    stack: ["Java", "Firebase", "Google Sign-In"],
-    link: "https://www.linkedin.com/in/tabitha-karuga-099200199/details/experience/",
+    stack: ["Java", "Firebase", "Git", "Google Maps", "Google Sign-In"],
+    link: "https://github.com/tabbykaruga/GABS-App",
   },
   {
     name: "Global Women Fitness App",
-    description: "A workout app forcused on women and diffrent excersises.",
+    description: `A simple fitness application focused on women’s workouts and exercise routines, developed primarily 
+    as a learning project to implement and understand MVVM architecture.`,
     logo: gwfaLogo,
-    stack: ["Flutter", "Dart", "Firebase", "Google Sign-In"],
-    link: "https://www.linkedin.com/in/tabitha-karuga-099200199/details/experience/",
+    stack: [
+      "Flutter",
+      "Dart",
+      "Firebase",
+      "MVVM Architecture",
+      "Google Sign-In",
+    ],
+    link: "https://github.com/tabbykaruga/Global-Women-Fitness-App",
   },
 ];
 
-// export const webAppProjects = [
-//   {
-//     title: "Tic Tac Toe Game",
-//     description: "A website with the game of tic tac toe.",
-//     imgUrl: ticTacToe,
-//   },
-//   {
-//     title: "Investor Web App",
-//     description: "A website thats helps you caculate the diffrent.",
-//     imgUrl: investorApp,
-//   },
-//   {
-//     title: "Portfolio",
-//     description: "The current website your see all the projects",
-//     imgUrl: portfolio,
-//   },
-// ];
+export const webAppProjects = [
+  {
+    name: "Tic Tac Toe Game",
+    description: `A two-player Tic-Tac-Toe game built to learn React.js fundamentals.`,
+    imgUrl: ticTacToe,
+    stack: ["React JS", "Git"],
+    link: "https://github.com/tabbykaruga/tic-tac-toe-game-react-js",
+  },
+  {
+    name: "Investor Web App",
+    description:
+      "An invetsment calculator website built to learn React.js fundamentals.",
+    imgUrl: investorApp,
+    stack: ["React JS", "Git"],
+    link: "https://github.com/tabbykaruga/investment-calculator",
+  },
+  {
+    name: "Portfolio",
+    description: `A personal portfolio platform designed to present my projects, skills, experience,
+     and professional identity, while also serving as a live demonstration of my technical abilities.`,
+    imgUrl: portfolio,
+    stack: ["React", "Git"],
+    link: "",
+  },
+];

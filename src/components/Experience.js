@@ -54,9 +54,6 @@ export default function Experiences() {
                         <h4 className="vertical-timeline-element-subtitle">
                           {el.company_name}
                         </h4>
-                        <h5 className="vertical-timeline-element-subtitle">
-                          {el.location}
-                        </h5>
                         <p>{el.description}</p>
                       </motion.div>
                     </VerticalTimelineElement>

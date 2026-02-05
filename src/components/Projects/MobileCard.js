@@ -1,5 +1,4 @@
 import { motion } from "framer-motion";
-import Carousel from "react-multi-carousel";
 import "react-multi-carousel/lib/styles.css";
 import { mobileProjects } from "../../constants";
 
@@ -16,7 +15,7 @@ export default function MobileCard() {
             transition={{ duration: 0.6, delay: i * 0.1 }}
             viewport={{ once: true }}
           >
-            <div className="project-logo">
+            <div className="mb-project-logo">
               <img src={app.logo} alt={app.name} />
             </div>
             <h3>{app.name}</h3>
@@ -26,11 +25,8 @@ export default function MobileCard() {
                 <span key={idx}>{tech}</span>
               ))}
             </div>
-
-            {/* Actions */}
             <div className="project-actions">
-              <a href={app.github}>GitHub</a>
-              <a href={app.caseStudy}>Details</a>
+              <a href={app.link}>{i === 0 ? "Google Play Store " : "GitHub"}</a>
             </div>
           </motion.div>
         ))}

@@ -32,14 +32,10 @@ export default function Projects() {
                 </Nav>
                 <Tab.Content>
                   <Tab.Pane eventKey="first">
-                    <Row>
-                      <MobileCard></MobileCard>
-                    </Row>
+                    <MobileCard></MobileCard>
                   </Tab.Pane>
                   <Tab.Pane eventKey="second">
-                    <Row>
-                      <WebCard />
-                    </Row>
+                    <WebCard />
                   </Tab.Pane>
                 </Tab.Content>
               </TabContainer>
