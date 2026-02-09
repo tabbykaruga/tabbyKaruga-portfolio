@@ -4,4 +4,4 @@ This is my personal portfolio website, showcasing a summary of who Tabitha Mutho
 
 ## Link
 
-[htttps://](https://tabbykaruga.github.io/tabbyKaruga-portfolio)
+[https://tabbykaruga.github.io/tabbyKaruga-portfolio/]
