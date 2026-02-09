@@ -1,6 +1,7 @@
 import { useState } from "react";
 import { Col, Container, Row } from "react-bootstrap";
 import ContactImg from "../assets/img/contact-img.svg";
+import emailjs from "@emailjs/browser";
 
 export default function ContactMe() {
   const formInitialDetails = {
@@ -11,8 +12,9 @@ export default function ContactMe() {
     message: "",
   };
   const [formDetails, setFormDetails] = useState(formInitialDetails);
-  const [sendButtonText, setSendButtonText] = useState("Send");
   const [status, setStatus] = useState({});
+  const [showPopup, setShowPopup] = useState(false);
+  const [isLoading, setIsLoading] = useState(false);
 
   const onFormUpdate = (category, value) => {
     setFormDetails({
@@ -21,30 +23,100 @@ export default function ContactMe() {
     });
   };
 
-  const handleSubmit = async (e) => {
-    e.preventDeafault();
-    setSendButtonText("Sending...");
-    let response = await fetch("http:/localhost:5000/contact", {
-      method: "POST",
-      headers: {
-        "Content-Type": "Application/json;charset=utf-8",
-      },
-      body: JSON.stringify(formDetails),
-    });
+  //USING EMAILJS
+  const handleSubmit = (e) => {
+    e.preventDefault();
 
-    sendButtonText("Send");
-    let results = response.json();
-    setFormDetails(formInitialDetails);
-
-    if (results.code === 200) {
-      setStatus({ success: true, message: "Message Sent Successfully" });
-    } else {
+    if (
+      !formDetails.firstName.trim() ||
+      !formDetails.email.trim() ||
+      !formDetails.message.trim()
+    ) {
       setStatus({
         success: false,
-        message: "Oops Something went wrong. Please try again later.",
+        message: "Please fill in First Name, Email and Message.",
       });
+      setShowPopup(true);
+
+      setTimeout(() => setShowPopup(false), 3000);
+      return;
     }
+
+    setIsLoading(true);
+
+    emailjs
+      .send(
+        process.env.REACT_APP_SERVICE_ID,
+        process.env.REACT_APP_TEMPLATE_ID,
+        {
+          name: `${formDetails.firstName} ${formDetails.lastName}`,
+          email: formDetails.email,
+          phone: formDetails.phone,
+          message: formDetails.message,
+        },
+        process.env.REACT_APP_PUBLIC_KEY,
+      )
+      .then(
+        () => {
+          setStatus({ success: true, message: "Message sent successfully!" });
+          setIsLoading(false);
+          setFormDetails(formInitialDetails);
+          setShowPopup(true);
+
+          //automatic close
+          setTimeout(() => setShowPopup(false), 3000);
+        },
+        (error) => {
+          console.error(error);
+          setStatus({
+            success: false,
+            message: "Failed to send message. Please try again.",
+          });
+          setIsLoading(false);
+          setShowPopup(true);
+
+          //automatic close
+          setTimeout(() => setShowPopup(false), 3000);
+        },
+      );
   };
+
+  //FOR THE BACKEND USING SERVER.JS
+  // const handleSubmit = async (e) => {
+  //   e.preventDefault();
+  //   setIsLoading(true);
+
+  //   try {
+  //     const response = await fetch("http://localhost:5000/api/contact", {
+  //       method: "POST",
+  //       headers: {
+  //         "Content-Type": "application/json",
+  //       },
+  //       body: JSON.stringify(formDetails),
+  //     });
+
+  //     const result = await response.json();
+
+  //     setIsLoading(false);
+  //     setFormDetails(formInitialDetails);
+
+  //     if (response.ok) {
+  //       setStatus({ success: true, message: "Message sent successfully!" });
+  //     } else {
+  //       setStatus({
+  //         success: false,
+  //         message: result.message || "Oops! Something went wrong.",
+  //       });
+  //     }
+  //   } catch (error) {
+  //     console.error(error);
+  //     setIsLoading(false);
+  //     setStatus({
+  //       success: false,
+  //       message: "Error sending message. Please try again later.",
+  //     });
+  //   }
+  // };
 
   return (
     <section className="contact" id="connect">
@@ -91,20 +163,28 @@ export default function ContactMe() {
                     placeholder="Message"
                     onChange={(e) => onFormUpdate("message", e.target.value)}
                   />
-                  <button type="submit">
-                    <span>{sendButtonText}</span>
+                  <button type="submit" disabled={isLoading}>
+                    {isLoading ? (
+                      <div className="spinner"></div>
+                    ) : (
+                      <span>Send</span>
+                    )}
                   </button>
                 </Col>
-                {status.message && (
-                  <Col>
-                    <p
-                      className={
-                        status.success === false ? "danger" : "success"
-                      }
+                {showPopup && (
+                  <div className="popup-overlay">
+                    <div
+                      className={`popup-box ${status.success ? "success" : "error"}`}
                     >
-                      {status.message}
-                    </p>
-                  </Col>
+                      {status.success && (
+                        <div className="success-animation">
+                          <div className="checkmark">✓</div>
+                        </div>
+                      )}
+                      <h3>{status.success ? "Success" : "Error"}</h3>
+                      <p>{status.message}</p>
+                    </div>
+                  </div>
                 )}
               </Row>
             </form>
