@@ -119,7 +119,7 @@ export default function ContactMe() {
   // };
 
   return (
-    <section className="contact" id="connect">
+    <section className="contact" id="contact">
       <Container>
         <Row className="align-items-center">
           <Col md={6}>

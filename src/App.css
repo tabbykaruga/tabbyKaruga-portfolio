@@ -46,6 +46,7 @@ html {
 
 body {
   font-weight: 400;
+  padding-top: 80px; 
   overflow-x: hidden;
   position: relative;
   background-color: #121212 !important;
@@ -106,6 +107,40 @@ p.danger {
 	color: red;
 }
 /************ Navbar Css ************/
+@media (max-width: 991px) {
+  nav.navbar {
+    padding: 12px 0;
+  }
+  nav.navbar .container {
+    flex-direction: column;
+    align-items: flex-start;
+    text-align: left;
+  }
+  .navbar-collapse {
+    background: #121212;
+    margin-top: 12px;
+    border-radius: 16px;
+    padding: 12px 0;
+  }
+  nav.navbar .navbar-nav {
+    text-align: left;
+  }
+  nav.navbar .navbar-nav .nav-link.navbar-link {
+    padding-left: 20px;
+    font-size: 18px;
+    display: block;
+  }
+  .mobile-social {
+    display: flex-start;
+    justify-content: center;
+    margin-top: 12px;
+    padding-left: 20px;
+  }
+  .social-icon a {
+    width: 46px;
+    height: 46px;
+  }
+}
 nav.navbar {
   padding: 18px 0;
   position: fixed;
@@ -210,7 +245,7 @@ span.navbar-text {
 }
 nav.navbar .container {
   display: flex;
-  align-items: center;
+  align-items: flex-start;
   justify-content: space-between;
 }
 nav.navbar .navbar-toggler:active,
@@ -340,48 +375,46 @@ nav.navbar .navbar-toggler[aria-expanded="true"] .navbar-toggler-icon {
 
 /************ Skills CSS ************/
 .skill {
-  padding: 0 0 0px 0;
+ 
   position: relative;
 }
 .skill-bx {
-  /* background: #151515; */
   border-radius: 48px;
   text-align: center;
-  padding: 30px 80px;
-  /* margin-top: -40px; */
-  margin-bottom: 60px;
+  padding: 10% 6%;
   overflow: hidden;
 }
 .skill h2 {
 	font-size: 65px;
 	font-weight: 700;
   text-align: center;
-  
 }
 .skill p {
-    color: #B8B8B8;;
+    color: #B8B8B8;
     font-size: 18px;
     letter-spacing: 0.8px;
     line-height: 1.5em;
-    margin: 14px 0 75px 0;
+    margin: 14px;
     text-align: center;
+}
+.skill .skills-name {
+  color: #fff;
+  font-size: 14px;
+  font-style: oblique;
 }
 .skill-slider {
   width: 100%;
-  margin: 0 auto;
   position: relative;
-  padding-bottom: 10px;
 }
 .skill-slider .item {
   border: 2px solid #9b59b6;
-  border-radius: 40px;        
-  padding-top: 30%;
-    
-  margin: 10px;               
+  border-radius: 20%;        
+  padding-top: 8%;
+  margin: 12px;               
   background: rgba(255, 255, 255, 0.05); 
   text-align: center;
   transition: transform 0.3s, box-shadow 0.3s;
-    min-height: 150px;  
+    min-height: 200px; 
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -393,7 +426,6 @@ nav.navbar .navbar-toggler[aria-expanded="true"] .navbar-toggler-icon {
 }
 .skill-slider .item img {
   width: 40%;
-  margin-bottom: 10px;
 }
 
 
@@ -584,9 +616,42 @@ nav.navbar .navbar-toggler[aria-expanded="true"] .navbar-toggler-icon {
   /* remove double border */
   border-radius: 0 55px 55px 0;
 }
+@media (max-width: 768px) {
+  /* Make pills stack vertically on small screens */
+  .nav-pills {
+    align-items: stretch;             
+    justify-content: space-between !important;;       
+    gap: 10px;                        
+    width: 90%;                       
+    margin: 0 auto;                   
+  }
+    .nav-link {
+    flex: 1 1 auto;
+    margin: 0 4px;
+  }
+  .nav-pills .nav-item {
+    width: 100%;                       
+  }
+  .nav-pills .nav-link {
+    border-radius: 12px !important;    
+    text-align: center;
+    padding: 10px 0;                   
+    border: 1px solid rgba(255,255,255,0.5);
+  }
+
+  /* Optional: remove left/right border radius on first/last */
+  .nav-pills .nav-link:first-child {
+    border-radius: 12px 12px 12px 12px !important;
+  }
+  .nav-pills .nav-link:last-child {
+    border-radius: 12px 12px 12px 12px !important;
+  }
+}
+
 
 /************ Experience CSS ************/
-.experience-bx {
+.experience {
+  position: relative;
   text-align: center;
   margin-top: 40px;
   overflow: hidden;
@@ -638,7 +703,7 @@ nav.navbar .navbar-toggler[aria-expanded="true"] .navbar-toggler-icon {
 /************ Contact Us CSS ************/
 .contact {
   background: linear-gradient(90.21deg, #AA367C -5.91%, #4A2FBD 111.58%);
-  padding: 60px 0 200px 0;
+  padding: 60px 20px 100px 20px;
 }
 .contact img {
   width: 92%;
@@ -793,16 +858,36 @@ nav.navbar .navbar-toggler[aria-expanded="true"] .navbar-toggler-icon {
 }
 .background-image-right {
   position: absolute;
-  top: 15%;
-  bottom:0p;
-  width: 100%;
-  z-index: -4;
+  top: 10%;
+  right: -20%;
+  width: 120%;
+  z-index: 0;
+  opacity: 0.6;
+  pointer-events: none;
 }
 .background-image-left {
-  top: 15%;
   position: absolute;
-  bottom: 0;
-  width: 90%;
-  z-index: -4;
+  top: 10%;
+  left: -20%;
+  width: 120%;
+  z-index: 0;
+  opacity: 0.6;
+  pointer-events: none;
 }
-
+.experience > .container {
+  position: relative;
+  z-index: 2;
+}
+@media (max-width: 768px) {
+  .background-image-right,
+  .background-image-left {
+    top: 20%;
+    width: 160%;
+    opacity: 0.35;
+  }
+}
+.background-image-right,
+.background-image-left {
+  filter: blur(1px);
+  opacity: 0.4;
+}

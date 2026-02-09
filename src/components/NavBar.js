@@ -56,7 +56,9 @@ export default function NavBar() {
             <Nav.Link
               href="#experience"
               className={
-                activeLink === "experience" ? "active navbar-link" : "navbar-link"
+                activeLink === "experience"
+                  ? "active navbar-link"
+                  : "navbar-link"
               }
               onClick={() => onUpdateActiveLink("experience")}
             >
@@ -83,15 +85,15 @@ export default function NavBar() {
               Contact Me
             </Nav.Link>
           </Nav>
+          <div className="social-icon">
+            <a href="https://github.com/tabbykaruga">
+              <img src={github} alt="GitHub" />
+            </a>
+            <a href="https://www.linkedin.com/in/tabitha-karuga-099200199/">
+              <img src={linkedIn} alt="LinkedIn" />
+            </a>
+          </div>
         </Navbar.Collapse>
-        <div className="social-icon">
-          <a href="https://github.com/tabbykaruga">
-            <img src={github} alt="GitHub" />
-          </a>
-          <a href="https://www.linkedin.com/in/tabitha-karuga-099200199/">
-            <img src={linkedIn} alt="LinkedIn" />
-          </a>
-        </div>
       </Container>
     </Navbar>
   );
