@@ -75,7 +75,13 @@ export default function Banner() {
                     proactively to deliver cutting-edge, scalable mobile apps
                     and websites.
                   </p>
-                  <button onClick={() => console.log("connect")}>
+                  <button
+                    onClick={() =>
+                      window.open(
+                        "https://www.linkedin.com/in/tabitha-karuga-099200199/",
+                      )
+                    }
+                  >
                     Let's connect
                     <ArrowRightCircle size={28} />
                   </button>
