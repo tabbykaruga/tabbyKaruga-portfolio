@@ -199,12 +199,12 @@ export const webAppProjects = [
     stack: ["React JS", "Git"],
     link: "https://github.com/tabbykaruga/investment-calculator",
   },
-  {
-    name: "Portfolio",
-    description: `A personal portfolio platform designed to present my projects, skills, experience,
-     and professional identity, while also serving as a live demonstration of my technical abilities.`,
-    imgUrl: portfolio,
-    stack: ["React", "Git"],
-    link: "",
-  },
+  // {
+  //   name: "Portfolio",
+  //   description: `A personal portfolio platform designed to present my projects, skills, experience,
+  //    and professional identity, while also serving as a live demonstration of my technical abilities.`,
+  //   imgUrl: portfolio,
+  //   stack: ["React", "Git"],
+  //   link: "",
+  // },
 ];

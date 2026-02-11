@@ -4,7 +4,7 @@ import { webAppProjects } from "../../constants";
 
 export default function WebCard() {
   return (
-    <section className="mobile-projects">
+    <section className="web-projects">
       <div className="projects-grid">
         {webAppProjects.map((web, i) => (
           <motion.div

@@ -448,11 +448,20 @@ nav.navbar .navbar-toggler[aria-expanded="true"] .navbar-toggler-icon {
   padding-bottom: 15px;
   padding-top: 15px;
 }
+
 .project-bx {
   text-align: center;
   margin-top: 40px;
   overflow: hidden;
-  padding: 0px 65px;
+  padding: 0px 60px;
+}
+@media (max-width: 768px) {
+.project-bx {
+  text-align: center;
+  margin-top: 40px;
+  overflow: hidden;
+  padding: 0px 25px;
+}
 }
 .section-title {
   font-size: 42px;
@@ -489,6 +498,7 @@ nav.navbar .navbar-toggler[aria-expanded="true"] .navbar-toggler-icon {
   align-items: center;
   justify-content: center;
   margin-bottom: 15px;
+  overflow: hidden;
 }
 .mb-project-logo img {
   width: 80%;
@@ -497,13 +507,14 @@ nav.navbar .navbar-toggler[aria-expanded="true"] .navbar-toggler-icon {
 }
 .wb-project-logo {
   width: 100%;
-  height: 50%;
+  height: 200px;
   border-radius: 4px;
   border: 1px solid #9b59b6;
   display: flex;
   align-items: center;
   justify-content: center;
   margin-bottom: 15px;
+  overflow: hidden;
 }
 .wb-project-logo img {
   width: 100%;
@@ -616,21 +627,10 @@ nav.navbar .navbar-toggler[aria-expanded="true"] .navbar-toggler-icon {
   /* remove double border */
   border-radius: 0 55px 55px 0;
 }
+
 @media (max-width: 768px) {
-  /* Make pills stack vertically on small screens */
-  .nav-pills {
-    align-items: stretch;             
-    justify-content: space-between !important;;       
-    gap: 10px;                        
-    width: 90%;                       
-    margin: 0 auto;                   
-  }
-    .nav-link {
-    flex: 1 1 auto;
-    margin: 0 4px;
-  }
   .nav-pills .nav-item {
-    width: 100%;                       
+    width: 100% !important;                       
   }
   .nav-pills .nav-link {
     border-radius: 12px !important;    
@@ -638,16 +638,44 @@ nav.navbar .navbar-toggler[aria-expanded="true"] .navbar-toggler-icon {
     padding: 10px 0;                   
     border: 1px solid rgba(255,255,255,0.5);
   }
-
-  /* Optional: remove left/right border radius on first/last */
-  .nav-pills .nav-link:first-child {
-    border-radius: 12px 12px 12px 12px !important;
-  }
-  .nav-pills .nav-link:last-child {
-    border-radius: 12px 12px 12px 12px !important;
-  }
+  .project .nav.nav-pills .nav-link::before {
+  content: "";
+  position: absolute;
+  height: 100%;
+  border-radius: 12px;
+  z-index: -1;
+  background: linear-gradient(90.21deg, #AA367C -5.91%, #4A2FBD 111.58%);
+  transition: 0.3s ease-in-out;
 }
+  .project .nav.nav-pills {
+  width: 100%;
+  margin: 0 auto;
+  border-radius: 0px;
+  background-color: transparent;
+  overflow: hidden;
+  display: flex;
+  gap: 10px;
+}
+  .project .nav.nav-pills .nav-item {
+    width: 50% !important;  
+    margin: 5px; 
+    flex: 1;          
+  }
+  .project .nav.nav-pills .nav-link {
+    width: 100%;
+    border-radius: 12px !important;
+    padding: 10px 0;
+    text-align: center;
+    font-size: 14px;
+    white-space: nowrap;
+  }
+  .nav-link#projects-tabs-tab-first,
+  .nav-link#projects-tabs-tab-second {
+    border-radius: 12px !important;
+    border-left: 1px solid rgba(255,255,255,0.5) !important;
+  }
 
+}*/
 
 /************ Experience CSS ************/
 .experience {
@@ -856,38 +884,39 @@ nav.navbar .navbar-toggler[aria-expanded="true"] .navbar-toggler-icon {
   border:  10px solid #fff;
   background-color: white;
 }
-.background-image-right {
-  position: absolute;
-  top: 10%;
-  right: -20%;
-  width: 120%;
-  z-index: 0;
-  opacity: 0.6;
-  pointer-events: none;
-}
+.background-image-right,
 .background-image-left {
   position: absolute;
   top: 10%;
-  left: -20%;
   width: 120%;
-  z-index: 0;
-  opacity: 0.6;
+  max-width: 2000px;
+  height: auto;
+  opacity: 0.4;
   pointer-events: none;
+  filter: blur(1px);
+  z-index: 0;
+  transition: all 0.3s ease;
 }
-.experience > .container {
-  position: relative;
-  z-index: 2;
+
+.background-image-right {
+  right: -10%;
+}
+.background-image-left {
+  left: -10%;
 }
 @media (max-width: 768px) {
   .background-image-right,
   .background-image-left {
-    top: 20%;
-    width: 160%;
+    top: 15%;
+    width: 140%;
+    left: -5%;
+    right: auto;
     opacity: 0.35;
   }
 }
-.background-image-right,
-.background-image-left {
-  filter: blur(1px);
-  opacity: 0.4;
+
+.experience > .container {
+  position: relative;
+  z-index: 2; 
 }
+

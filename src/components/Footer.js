@@ -14,7 +14,7 @@ export default function Footer() {
               karugatabithamuthoni@gmail.com
             </a>
             <p>
-              <a href="/TabithaKarugaCV.pdf" download>
+              <a href="/TabithaKaruga-CV.pdf" download>
                 <button className="footer-btn">
                   <span>Download CV</span>
                 </button>

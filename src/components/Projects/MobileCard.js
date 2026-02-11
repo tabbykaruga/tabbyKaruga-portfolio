@@ -4,7 +4,7 @@ import { mobileProjects } from "../../constants";
 
 export default function MobileCard() {
   return (
-    <section className="mobile-projects">
+    <section className="mobile-projects-bx">
       <div className="projects-grid">
         {mobileProjects.map((app, i) => (
           <motion.div
