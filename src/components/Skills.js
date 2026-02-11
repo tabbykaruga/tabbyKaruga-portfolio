@@ -1,8 +1,6 @@
 import { Container, Row, Col } from "react-bootstrap";
 import Carousel from "react-multi-carousel";
 import "react-multi-carousel/lib/styles.css";
-import colorSharpLeft from "../assets/img/color-sharp-left.png";
-import colorSharpRight from "../assets/img/color-sharp-right.png";
 import { skills } from "../constants";
 
 export default function Skills() {
@@ -47,16 +45,6 @@ export default function Skills() {
           </Col>
         </Row>
       </Container>
-      <img
-        className="background-image-left"
-        src={colorSharpLeft}
-        alt="BackgroundImageLeft"
-      />
-      <img
-        className="background-image-right"
-        src={colorSharpRight}
-        alt="BackgroundImageRight"
-      />
     </section>
   );
 }

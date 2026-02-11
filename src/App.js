@@ -15,19 +15,23 @@ function App() {
       <section id="home">
         <Banner />
       </section>
-      <section id="skills">
-        <Skills />
-      </section>
-      <section id="experience">
-        <Experiences />
-      </section>
-      <section id="projects">
-        <Projects />
-      </section>
-      <section id="contactMe">
-        <ContactMe />
-      </section>
-      <Footer />
+      <div className="content">
+        <section id="skills">
+          <Skills />
+        </section>
+        <section id="experience">
+          <Experiences />
+        </section>
+        <section id="projects">
+          <Projects />
+        </section>
+      </div>
+      <div className="footer-content">
+        <section id="contactMe">
+          <ContactMe />
+        </section>
+        <Footer />
+      </div>
     </div>
   );
 }

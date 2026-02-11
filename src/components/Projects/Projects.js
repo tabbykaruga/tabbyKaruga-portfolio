@@ -1,8 +1,6 @@
 import { Col, Container, Row, Nav, TabContainer, Tab } from "react-bootstrap";
 import WebCard from "./WebCard";
 import MobileCard from "./MobileCard";
-import colorSharpRight from "../../assets/img/color-sharp-right.png";
-import colorSharpLeft from "../../assets/img/color-sharp-left.png";
 
 export default function Projects() {
   return (
@@ -43,16 +41,6 @@ export default function Projects() {
           </Col>
         </Row>
       </Container>
-      <img
-        className="background-image-left"
-        src={colorSharpLeft}
-        alt="BackgroundImageLeft"
-      />
-      <img
-        className="background-image-right"
-        src={colorSharpRight}
-        alt="BackgroundImageRight"
-      />
     </section>
   );
 }
