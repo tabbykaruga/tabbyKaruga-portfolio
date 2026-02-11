@@ -19,7 +19,6 @@ import softclansLogo from "../assets/img/icons/softclans_logo.jpg";
 import gabsLogo from "../assets/img/icons/gabslogos.jpeg";
 import ticTacToe from "../assets/img/projects/tic-tac-toe.png";
 import investorApp from "../assets/img/projects/investor_calculator.png";
-import portfolio from "../assets/img/projects/portfolio.png";
 
 export const navLinks = [
   {
