@@ -317,46 +317,7 @@ nav.navbar .navbar-toggler[aria-expanded="true"] .navbar-toggler-icon {
   position: relative;
   margin-bottom: -1px;
 }
-.banner::after {
-  content: '';
-  position: absolute;
-  bottom: 0;
-  left: 0;
-  width: 100%;
-  height: 150px;
-  background: linear-gradient(
-    to bottom,
-    transparent 0%,
-    rgba(170, 54, 124, 0.3) 40%,
-    rgba(170, 54, 124, 0.5) 100%
-  );  
-  z-index: 1;
-  clip-path: polygon(
-    0% 0%,
-    0% 65%,
-    5% 70%,
-    10% 68%,
-    15% 72%,
-    20% 70%,
-    25% 75%,
-    30% 72%,
-    35% 78%,
-    40% 75%,
-    45% 80%,
-    50% 77%,
-    55% 82%,
-    60% 78%,
-    65% 80%,
-    70% 75%,
-    75% 78%,
-    80% 73%,
-    85% 75%,
-    90% 70%,
-    95% 72%,
-    100% 68%,
-    100% 0%
-  );
-}
+
 .banner .tagline {
   font-weight: 700;
   letter-spacing: 0.8px;
@@ -434,30 +395,70 @@ nav.navbar .navbar-toggler[aria-expanded="true"] .navbar-toggler-icon {
   padding-top: 0;
   margin-top: -1px;
 }
-
-.content::before {
-  content: '';
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background: linear-gradient(90.21deg, rgba(170, 54, 124, 0.5) -5.91%, rgba(74, 47, 189, 0.5) 111.58%);
-  z-index: -1; 
-} 
-.content::after {
-  content: '';
-  position: absolute;
-  bottom: 0;
-  left: 0;
-  width: 100%;
-  height: 100px;
-  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 1200 120' preserveAspectRatio='none'%3E%3Cpath d='M985.66 92.83C906.67 72 823.78 31 743.84 14.19c-82.26-17.34-168.06-16.33-250.45.39-57.84 11.73-114 31.07-172 41.86A600.21 600.21 0 010 27.35V120h1200V95.8c-67.81 23.12-144.29 15.51-214.34-2.97z' fill='%23121212'/%3E%3C/svg%3E");
-  background-repeat: no-repeat;
-  z-index: 1;
+.body-content {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  /* align-items: center; */
+  z-index: 2;
+  background: linear-gradient(90.21deg, #AA367C80 -5.91%, #4A2FBD80 111.58%);
 }
 
+.wave-separator {
+  width: 100%;
+  line-height: 0;
+  overflow: hidden;
+}
 
+.wave-separator svg {
+  display: block;
+  width: 100%;
+  height: auto;
+  min-height: 60px;
+  max-height: 150px;
+}
+
+.wave-separator-bottom {
+  width: 100%;
+  line-height: 0;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+}
+
+.wave-separator-bottom svg {
+  display: block;
+  width: 100%;
+  height: auto;
+  min-height: 60px;
+  max-height: 150px;
+}
+
+@media (max-width: 768px) {
+
+  .wave-separator svg,
+  .wave-separator-bottom svg {
+    min-height: 40px;
+    max-height: 80px;
+  }
+
+  .body-content {
+    padding: 50px 20px;
+  }
+}
+
+@media (max-width: 480px) {
+
+  .wave-separator svg,
+  .wave-separator-bottom svg {
+    min-height: 30px;
+    max-height: 60px;
+  }
+
+  .body-content {
+    padding: 30px 15px;
+  }
+}
 /************ Skills CSS ************/
 .skill {
   position: relative;

@@ -7,6 +7,8 @@ import Projects from "./components/Projects/Projects";
 import ContactMe from "./components/ContactMe";
 import Footer from "./components/Footer";
 import Experiences from "./components/Experience";
+import TopSeparator from "./components/TopSeparator";
+import BottomSeparator from "./components/BottomSeparator";
 
 function App() {
   return (
@@ -15,7 +17,8 @@ function App() {
       <section id="home">
         <Banner />
       </section>
-      <div className="content">
+      <TopSeparator/>
+      <div className="body-content">
         <section id="skills">
           <Skills />
         </section>
@@ -26,6 +29,7 @@ function App() {
           <Projects />
         </section>
       </div>
+      <BottomSeparator/>
       <div className="footer-content">
         <section id="contactMe">
           <ContactMe />
