@@ -1,12 +1,11 @@
 {
   "files": {
-    "main.css": "/tabbyKaruga-portfolio/static/css/main.cea47e46.css",
-    "main.js": "/tabbyKaruga-portfolio/static/js/main.2bd3a059.js",
+    "main.css": "/tabbyKaruga-portfolio/static/css/main.0e74eed7.css",
+    "main.js": "/tabbyKaruga-portfolio/static/js/main.02fc7d82.js",
     "static/js/453.3f1fb51b.chunk.js": "/tabbyKaruga-portfolio/static/js/453.3f1fb51b.chunk.js",
     "static/media/Inter-Italic-VariableFont_opsz,wght.ttf": "/tabbyKaruga-portfolio/static/media/Inter-Italic-VariableFont_opsz,wght.831252f8ba7e1b5b2432.ttf",
     "static/media/Inter-VariableFont_opsz,wght.ttf": "/tabbyKaruga-portfolio/static/media/Inter-VariableFont_opsz,wght.e05c5f3d1fa6a3893d84.ttf",
     "static/media/color-sharp-left.png": "/tabbyKaruga-portfolio/static/media/color-sharp-left.bea361cfef80fefc2d1e.png",
-    "static/media/color-sharp-right.png": "/tabbyKaruga-portfolio/static/media/color-sharp-right.c87586c6c2f549cb4aa6.png",
     "static/media/tic-tac-toe.png": "/tabbyKaruga-portfolio/static/media/tic-tac-toe.2a8c096465286b475f4b.png",
     "static/media/investor_calculator.png": "/tabbyKaruga-portfolio/static/media/investor_calculator.4d03ce7ec965e07d36c5.png",
     "static/media/PlayfairDisplay-Bold.ttf": "/tabbyKaruga-portfolio/static/media/PlayfairDisplay-Bold.88f1a070c53ae962acf1.ttf",
@@ -15,7 +14,6 @@
     "static/media/PlayfairDisplay-Italic.ttf": "/tabbyKaruga-portfolio/static/media/PlayfairDisplay-Italic.232f9cf2c1e7da1ea6a6.ttf",
     "static/media/header-img.svg": "/tabbyKaruga-portfolio/static/media/header-img.400baa4260daac98f2b2b1ccf08761c2.svg",
     "static/media/gabslogos.jpeg": "/tabbyKaruga-portfolio/static/media/gabslogos.e7e5fe760316adef292e.jpeg",
-    "static/media/footer-bg.png": "/tabbyKaruga-portfolio/static/media/footer-bg.7bd67c0f73571d0acc02.png",
     "static/media/gwfa_logo.png": "/tabbyKaruga-portfolio/static/media/gwfa_logo.f3009ec22e8ce5e94208.png",
     "static/media/psql.png": "/tabbyKaruga-portfolio/static/media/psql.52d31cc1fd8306d5ff52.png",
     "static/media/react.png": "/tabbyKaruga-portfolio/static/media/react.48b16201b029fea484c6.png",
@@ -28,6 +26,7 @@
     "static/media/linkedInLogo.svg": "/tabbyKaruga-portfolio/static/media/linkedInLogo.fc392e9be787d7f67c054d651b8dbc94.svg",
     "static/media/Figma.png": "/tabbyKaruga-portfolio/static/media/Figma.2b512d290bb8b0334d7c.png",
     "static/media/html.png": "/tabbyKaruga-portfolio/static/media/html.6e930594286d8afe4c79.png",
+    "static/media/download.png": "/tabbyKaruga-portfolio/static/media/download.ac623314a31e3f75c34a.png",
     "static/media/css.png": "/tabbyKaruga-portfolio/static/media/css.463e319bad8e0edf1ef7.png",
     "static/media/laravel.png": "/tabbyKaruga-portfolio/static/media/laravel.54ccab32fdab41b4b2b9.png",
     "static/media/revicons.eot": "/tabbyKaruga-portfolio/static/media/revicons.a77de540a38981833f9e.eot",
@@ -35,12 +34,12 @@
     "static/media/githubLogo.svg": "/tabbyKaruga-portfolio/static/media/githubLogo.755b94a2e22695c39dbe89754d3930d8.svg",
     "static/media/revicons.woff": "/tabbyKaruga-portfolio/static/media/revicons.e8746a624ed098489406.woff",
     "index.html": "/tabbyKaruga-portfolio/index.html",
-    "main.cea47e46.css.map": "/tabbyKaruga-portfolio/static/css/main.cea47e46.css.map",
-    "main.2bd3a059.js.map": "/tabbyKaruga-portfolio/static/js/main.2bd3a059.js.map",
+    "main.0e74eed7.css.map": "/tabbyKaruga-portfolio/static/css/main.0e74eed7.css.map",
+    "main.02fc7d82.js.map": "/tabbyKaruga-portfolio/static/js/main.02fc7d82.js.map",
     "453.3f1fb51b.chunk.js.map": "/tabbyKaruga-portfolio/static/js/453.3f1fb51b.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.cea47e46.css",
-    "static/js/main.2bd3a059.js"
+    "static/css/main.0e74eed7.css",
+    "static/js/main.02fc7d82.js"
   ]
 }
