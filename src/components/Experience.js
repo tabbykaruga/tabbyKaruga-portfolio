@@ -14,7 +14,7 @@ export default function Experiences() {
       <Container>
         <Row>
           <Col>
-            <div>
+            <div className="experience-bx">
               <h2>Work Experience</h2>
               <VerticalTimeline>
                 {myExperiences.map((el, index) => {
@@ -53,6 +53,15 @@ export default function Experiences() {
                           {el.company_name}
                         </h4>
                         <p>{el.description}</p>
+                        {el.technologies && (
+                          <div className="tech-stack">
+                            {el.technologies.map((tech, i) => (
+                              <span key={i} className="tech-badge">
+                                {tech}
+                              </span>
+                            ))}
+                          </div>
+                        )}
                       </motion.div>
                     </VerticalTimelineElement>
                   );

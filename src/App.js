@@ -17,19 +17,19 @@ function App() {
       <section id="home">
         <Banner />
       </section>
-      <TopSeparator/>
+      <TopSeparator />
       <div className="body-content">
-        <section id="skills">
+        <section id="skills" data-aos="fade-up">
           <Skills />
         </section>
-        <section id="experience">
-          <Experiences />
-        </section>
-        <section id="projects">
+        <section id="projects" data-aos="fade-up">
           <Projects />
         </section>
+        <section id="experience" data-aos="fade-up">
+          <Experiences />
+        </section>
       </div>
-      <BottomSeparator/>
+      <BottomSeparator />
       <div className="footer-content">
         <section id="contactMe">
           <ContactMe />
