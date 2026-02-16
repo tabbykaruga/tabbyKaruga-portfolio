@@ -49,7 +49,7 @@ export const skills = [
     img: java,
   },
   {
-    name: "React",
+    name: "React JS",
     img: react,
   },
   {
@@ -101,7 +101,7 @@ export const skills = [
 export const myExperiences = [
   {
     id: 1,
-    title: "Software Engineer I",
+    title: "Software Engineer",
     company_name: "Smart Applications International Ltd",
     icon: smartApplicationLogo,
     location: "Nairobi, Kenya",
@@ -112,7 +112,17 @@ export const myExperiences = [
        publishing to the Google Play Store. Skilled in creating intuitive, user-friendly experiences and collaborating 
        via GitLab.`,
     ],
-    link: "https://play.google.com/store/apps/details?id=com.smart.smartaccess&pli=1",
+    technologies: [
+      "Flutter",
+      "BLoC",
+      "Firebase",
+      "React Js",
+      "Figma",
+      "HTML",
+      "CSS",
+      "Git",
+      "MVVM"
+    ],
   },
   {
     id: 2,
@@ -123,8 +133,17 @@ export const myExperiences = [
     date: "May 2022 - June 2024",
     description: [
       `Specializing in mobile and web development, building scalable cross-platform apps and dynamic web portals. 
-      Experienced in Agile workflows, Git version control, RESTful API integration, and applying MVC/MVVM architectures 
+      Experienced in Agile workflows, Git version control, RESTful API integration, and applying MVC architectures 
       for maintainable, high-performing solutions.`,
+    ],
+    technologies: [
+      "Flutter",
+      "Extended JS",
+      "Laravel",
+      "Java",
+      "PSQL",
+      "Git",
+      "MVC",
     ],
   },
   {
@@ -135,9 +154,17 @@ export const myExperiences = [
     icon: softclansLogo,
     date: "Nov 2021 - Apr 2022",
     description: [
-      `Started as an Intern with hands-on experience in Flutter and Laravel, building scalable mobile and web applications. 
-     Skilled in Agile workflows, Git version control, MVC architecture, and documenting development processes for 
-     maintainable and efficient code.`,
+      `Underwent intensive training across various programming languages,frameworks, and technologiew with practical application 
+      and architectures like MVC Architecture`,
+    ],
+    technologies: [
+      "Flutter",
+      "Extended JS",
+      "Laravel",
+      "Java",
+      "PSQL",
+      "Git",
+      "MVC",
     ],
   },
 ];
@@ -185,9 +212,9 @@ export const mobileProjects = [
 export const webAppProjects = [
   {
     name: "Tic Tac Toe Game",
-    description: `A two-player Tic-Tac-Toe game built to learn React.js fundamentals.`,
+    description: `A two-player functional Tic-Tac-Toe game.`,
     imgUrl: ticTacToe,
-    stack: ["React JS", "Git"],
+    stack: ["React JS", "HTML", "CSS", "Git"],
     link: "https://github.com/tabbykaruga/tic-tac-toe-game-react-js",
   },
   {
@@ -195,7 +222,7 @@ export const webAppProjects = [
     description:
       "An invetsment calculator website built to learn React.js fundamentals.",
     imgUrl: investorApp,
-    stack: ["React JS", "Git"],
+    stack: ["React JS", "HTML", "CSS", "Git"],
     link: "https://github.com/tabbykaruga/investment-calculator",
   },
   // {

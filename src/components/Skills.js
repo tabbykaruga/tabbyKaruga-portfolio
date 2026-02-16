@@ -1,9 +1,8 @@
 import { Container, Row, Col } from "react-bootstrap";
 import Carousel from "react-multi-carousel";
 import "react-multi-carousel/lib/styles.css";
-import colorSharpLeft from "../assets/img/color-sharp-left.png";
-import colorSharpRight from "../assets/img/color-sharp-right.png";
 import { skills } from "../constants";
+import { motion } from "framer-motion";
 
 export default function Skills() {
   const responsive = {
@@ -15,48 +14,47 @@ export default function Skills() {
 
   return (
     <section className="skill" id="skill">
-      <Container>
-        <Row>
-          <Col>
-            <div className="skill-bx">
-              <h2>Skills</h2>
-              <p>
-                "I am proficient in a wide range of technologies, including
-                mobile and web development frameworks, databases, version
-                control, different architectures including MVVM AND MVC
-                architecture and UI/UX design.
-              </p>
-              <Carousel
-                responsive={responsive}
-                infinite={true}
-                autoPlay={true}
-                autoPlaySpeed={1500}
-                transitionDuration={500}
-                centerMode={window.innerWidth > 768}
-                arrows={false}
-                className="skill-slider"
-              >
-                {skills.map((skill, index) => (
-                  <div className="item">
-                    <img src={skill.img} alt="" />
-                    <p className="skills-name">{skill.name}</p>
-                  </div>
-                ))}
-              </Carousel>
-            </div>
-          </Col>
-        </Row>
-      </Container>
-      <img
-        className="background-image-left"
-        src={colorSharpLeft}
-        alt="BackgroundImageLeft"
-      />
-      <img
-        className="background-image-right"
-        src={colorSharpRight}
-        alt="BackgroundImageRight"
-      />
+      <motion.section
+        className="skill"
+        id="skill"
+        initial={{ opacity: 0, y: 50 }}
+        whileInView={{ opacity: 1, y: 0 }}
+        viewport={{ once: true, amount: 0.3 }}
+        transition={{ duration: 0.8, ease: "easeOut" }}
+      >
+        <Container>
+          <Row>
+            <Col>
+              <div className="skill-bx">
+                <h2>Skills</h2>
+                <p>
+                  "I am proficient in a wide range of technologies, including
+                  mobile and web development frameworks, databases, version
+                  control, different architectures including MVVM AND MVC
+                  architecture and UI/UX design.
+                </p>
+                <Carousel
+                  responsive={responsive}
+                  infinite={true}
+                  autoPlay={true}
+                  autoPlaySpeed={1000}
+                  transitionDuration={500}
+                  centerMode={window.innerWidth > 768}
+                  arrows={false}
+                  className="skill-slider"
+                >
+                  {skills.map((skill, index) => (
+                    <div className="item">
+                      <img src={skill.img} alt="" />
+                      <p className="skills-name">{skill.name}</p>
+                    </div>
+                  ))}
+                </Carousel>
+              </div>
+            </Col>
+          </Row>
+        </Container>
+      </motion.section>
     </section>
   );
 }
