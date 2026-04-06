@@ -14,6 +14,7 @@ import figma from "../assets/img/skills/Figma.png";
 import androidStudio from "../assets/img/skills/androidStudio.png";
 import vsCode from "../assets/img/skills/vsCode.png";
 import smartApplicationLogo from "../assets/img/icons/smart_logo.jpg";
+import instaCloneLogo from "../assets/img/icons/instaClone_logo.png";
 import gwfaLogo from "../assets/img/icons/gwfa_logo.png";
 import softclansLogo from "../assets/img/icons/softclans_logo.jpg";
 import gabsLogo from "../assets/img/icons/gabslogos.jpeg";
@@ -121,7 +122,7 @@ export const myExperiences = [
       "HTML",
       "CSS",
       "Git",
-      "MVVM"
+      "MVVM",
     ],
   },
   {
@@ -184,6 +185,22 @@ export const mobileProjects = [
       "Google Sign-In",
     ],
     link: "https://play.google.com/store/apps/details?id=com.smart.smartaccess&pli=1",
+  },
+  {
+    name: "InstaClone App",
+    description: `A functional Instagram clone built with Kotlin, featuring core social media capabilities 
+    including image posting, likes, a discovery feed, image search, and profile customization.`,
+    logo: instaCloneLogo,
+    stack: [
+      "Kotlin",
+      "JetPack Composer",
+      "MVVM Architecture",
+      "Firebase Authentication",
+      "Firebase Storage",
+      "UI/UX",
+      "Git",
+    ],
+    link: "https://github.com/tabbykaruga/InstaClone",
   },
   {
     name: "GABS App",
