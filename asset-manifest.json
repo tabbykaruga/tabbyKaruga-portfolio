@@ -1,7 +1,7 @@
 {
   "files": {
     "main.css": "/tabbyKaruga-portfolio/static/css/main.0e74eed7.css",
-    "main.js": "/tabbyKaruga-portfolio/static/js/main.02fc7d82.js",
+    "main.js": "/tabbyKaruga-portfolio/static/js/main.c9edb9d8.js",
     "static/js/453.3f1fb51b.chunk.js": "/tabbyKaruga-portfolio/static/js/453.3f1fb51b.chunk.js",
     "static/media/Inter-Italic-VariableFont_opsz,wght.ttf": "/tabbyKaruga-portfolio/static/media/Inter-Italic-VariableFont_opsz,wght.831252f8ba7e1b5b2432.ttf",
     "static/media/Inter-VariableFont_opsz,wght.ttf": "/tabbyKaruga-portfolio/static/media/Inter-VariableFont_opsz,wght.e05c5f3d1fa6a3893d84.ttf",
@@ -22,6 +22,7 @@
     "static/media/androidStudio.png": "/tabbyKaruga-portfolio/static/media/androidStudio.ef1f00b76202dd1a5e0a.png",
     "static/media/vsCode.png": "/tabbyKaruga-portfolio/static/media/vsCode.c451d51c85d02c2a3841.png",
     "static/media/java.png": "/tabbyKaruga-portfolio/static/media/java.f5dd86c3ef6ef3f85acf.png",
+    "static/media/instaClone_logo.png": "/tabbyKaruga-portfolio/static/media/instaClone_logo.75e0546a6b5abe4c0506.png",
     "static/media/git.png": "/tabbyKaruga-portfolio/static/media/git.63b94516b0c8926a967f.png",
     "static/media/linkedInLogo.svg": "/tabbyKaruga-portfolio/static/media/linkedInLogo.fc392e9be787d7f67c054d651b8dbc94.svg",
     "static/media/Figma.png": "/tabbyKaruga-portfolio/static/media/Figma.2b512d290bb8b0334d7c.png",
@@ -35,11 +36,11 @@
     "static/media/revicons.woff": "/tabbyKaruga-portfolio/static/media/revicons.e8746a624ed098489406.woff",
     "index.html": "/tabbyKaruga-portfolio/index.html",
     "main.0e74eed7.css.map": "/tabbyKaruga-portfolio/static/css/main.0e74eed7.css.map",
-    "main.02fc7d82.js.map": "/tabbyKaruga-portfolio/static/js/main.02fc7d82.js.map",
+    "main.c9edb9d8.js.map": "/tabbyKaruga-portfolio/static/js/main.c9edb9d8.js.map",
     "453.3f1fb51b.chunk.js.map": "/tabbyKaruga-portfolio/static/js/453.3f1fb51b.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.0e74eed7.css",
-    "static/js/main.02fc7d82.js"
+    "static/js/main.c9edb9d8.js"
   ]
 }
