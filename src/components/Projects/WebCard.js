@@ -28,7 +28,16 @@ export default function WebCard() {
 
             {/* Actions */}
             <div className="project-actions">
-              {i !== 2 && <a href={web.link}>GitHub</a>}
+              {web.link && (
+                <a href={web.link} target="_blank" rel="noopener noreferrer" className="btn-github">
+                  GitHub
+                </a>
+              )}
+              {web.vercel && (
+                <a href={web.vercel} target="_blank" rel="noopener noreferrer" className="btn-vercel">
+                  Live Demo
+                </a>
+              )}
             </div>
           </motion.div>
         ))}

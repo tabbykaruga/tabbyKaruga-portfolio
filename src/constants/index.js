@@ -247,25 +247,28 @@ export const mobileProjects = [
 export const webAppProjects = [
   {
     name: "Tic Tac Toe Game",
-    description: `A two-player functional Tic-Tac-Toe game.`,
+    description: `A two-player Tic-Tac-Toe game built with React, featuring dynamic state management, real-time win/draw detection, and a fully responsive, component-driven UI.`,
     imgUrl: ticTacToe,
     stack: ["React JS", "HTML", "CSS", "Git"],
-    link: "https://tabitha-karuga-tic-tac-toe-game.vercel.app/",
+    link: "https://github.com/tabbykaruga/tic-tac-toe-game-react-js",
+    vercel: "https://tabitha-karuga-tic-tac-toe-game.vercel.app/"
   },
   {
     name: "Investor Web App",
     description:
-      "An invetsment calculator website built to learn React.js fundamentals.",
+      "An invetsment calculator website that allows users to calculate potential investment returns based on initial investment, interest rate, and time period.",
     imgUrl: investorApp,
-    stack: ["React JS", "HTML", "CSS", "Git"],
+    stack: ["React JS", "HTML", "CSS", "React Bootstrap", "Git"],
     link: "https://github.com/tabbykaruga/investment-calculator",
+    vercel: "https://tabitha-karuga-investment-calculator.vercel.app/"
   },
   {
     name: "Portfolio",
     description: `A personal portfolio platform designed to present my projects, skills, experience,
      and professional identity, while also serving as a live demonstration of my technical abilities.`,
     imgUrl: portfolio,
-    stack: ["React", "Django", "Python", "Git", "HTML", "CSS", "Vercel"],
-    link: "",
+    stack: ["React", "HTML", "CSS", "React Bootstrap", "Git"],
+    link: "https://github.com/tabbykaruga/tabbyKaruga-portfolio",
+    vercel: ""
   },
 ];
