@@ -1,11 +1,12 @@
 {
   "files": {
     "main.css": "/tabbyKaruga-portfolio/static/css/main.0e74eed7.css",
-    "main.js": "/tabbyKaruga-portfolio/static/js/main.c9edb9d8.js",
+    "main.js": "/tabbyKaruga-portfolio/static/js/main.5ce3934c.js",
     "static/js/453.3f1fb51b.chunk.js": "/tabbyKaruga-portfolio/static/js/453.3f1fb51b.chunk.js",
     "static/media/Inter-Italic-VariableFont_opsz,wght.ttf": "/tabbyKaruga-portfolio/static/media/Inter-Italic-VariableFont_opsz,wght.831252f8ba7e1b5b2432.ttf",
     "static/media/Inter-VariableFont_opsz,wght.ttf": "/tabbyKaruga-portfolio/static/media/Inter-VariableFont_opsz,wght.e05c5f3d1fa6a3893d84.ttf",
     "static/media/color-sharp-left.png": "/tabbyKaruga-portfolio/static/media/color-sharp-left.bea361cfef80fefc2d1e.png",
+    "static/media/portfolio.png": "/tabbyKaruga-portfolio/static/media/portfolio.7d41aece70dbe96e3439.png",
     "static/media/tic-tac-toe.png": "/tabbyKaruga-portfolio/static/media/tic-tac-toe.2a8c096465286b475f4b.png",
     "static/media/investor_calculator.png": "/tabbyKaruga-portfolio/static/media/investor_calculator.4d03ce7ec965e07d36c5.png",
     "static/media/PlayfairDisplay-Bold.ttf": "/tabbyKaruga-portfolio/static/media/PlayfairDisplay-Bold.88f1a070c53ae962acf1.ttf",
@@ -20,6 +21,7 @@
     "static/media/contact-img.svg": "/tabbyKaruga-portfolio/static/media/contact-img.62aa99e0f3b968b5d1ce9eb047f34fc7.svg",
     "static/media/php.png": "/tabbyKaruga-portfolio/static/media/php.4990580e9b615aeebb1f.png",
     "static/media/androidStudio.png": "/tabbyKaruga-portfolio/static/media/androidStudio.ef1f00b76202dd1a5e0a.png",
+    "static/media/python.png": "/tabbyKaruga-portfolio/static/media/python.65c0e9243c20520b4fdf.png",
     "static/media/vsCode.png": "/tabbyKaruga-portfolio/static/media/vsCode.c451d51c85d02c2a3841.png",
     "static/media/java.png": "/tabbyKaruga-portfolio/static/media/java.f5dd86c3ef6ef3f85acf.png",
     "static/media/instaClone_logo.png": "/tabbyKaruga-portfolio/static/media/instaClone_logo.75e0546a6b5abe4c0506.png",
@@ -36,11 +38,11 @@
     "static/media/revicons.woff": "/tabbyKaruga-portfolio/static/media/revicons.e8746a624ed098489406.woff",
     "index.html": "/tabbyKaruga-portfolio/index.html",
     "main.0e74eed7.css.map": "/tabbyKaruga-portfolio/static/css/main.0e74eed7.css.map",
-    "main.c9edb9d8.js.map": "/tabbyKaruga-portfolio/static/js/main.c9edb9d8.js.map",
+    "main.5ce3934c.js.map": "/tabbyKaruga-portfolio/static/js/main.5ce3934c.js.map",
     "453.3f1fb51b.chunk.js.map": "/tabbyKaruga-portfolio/static/js/453.3f1fb51b.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.0e74eed7.css",
-    "static/js/main.c9edb9d8.js"
+    "static/js/main.5ce3934c.js"
   ]
 }
