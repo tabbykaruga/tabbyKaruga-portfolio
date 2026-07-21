@@ -4,5 +4,7 @@ This is my personal portfolio website, showcasing a summary of who Tabitha Mutho
 
 ## Link
 
-[https://tabbykaruga.github.io/tabbyKaruga-portfolio/]
 [https://tabby-karuga-portfolio.vercel.app/]
+OR 
+[https://tabbykaruga.github.io/tabbyKaruga-portfolio/]
+
