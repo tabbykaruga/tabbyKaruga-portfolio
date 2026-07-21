@@ -1,7 +1,7 @@
 {
   "files": {
     "main.css": "/tabbyKaruga-portfolio/static/css/main.0e74eed7.css",
-    "main.js": "/tabbyKaruga-portfolio/static/js/main.5ce3934c.js",
+    "main.js": "/tabbyKaruga-portfolio/static/js/main.f7bd7f09.js",
     "static/js/453.3f1fb51b.chunk.js": "/tabbyKaruga-portfolio/static/js/453.3f1fb51b.chunk.js",
     "static/media/Inter-Italic-VariableFont_opsz,wght.ttf": "/tabbyKaruga-portfolio/static/media/Inter-Italic-VariableFont_opsz,wght.831252f8ba7e1b5b2432.ttf",
     "static/media/Inter-VariableFont_opsz,wght.ttf": "/tabbyKaruga-portfolio/static/media/Inter-VariableFont_opsz,wght.e05c5f3d1fa6a3893d84.ttf",
@@ -38,11 +38,11 @@
     "static/media/revicons.woff": "/tabbyKaruga-portfolio/static/media/revicons.e8746a624ed098489406.woff",
     "index.html": "/tabbyKaruga-portfolio/index.html",
     "main.0e74eed7.css.map": "/tabbyKaruga-portfolio/static/css/main.0e74eed7.css.map",
-    "main.5ce3934c.js.map": "/tabbyKaruga-portfolio/static/js/main.5ce3934c.js.map",
+    "main.f7bd7f09.js.map": "/tabbyKaruga-portfolio/static/js/main.f7bd7f09.js.map",
     "453.3f1fb51b.chunk.js.map": "/tabbyKaruga-portfolio/static/js/453.3f1fb51b.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.0e74eed7.css",
-    "static/js/main.5ce3934c.js"
+    "static/js/main.f7bd7f09.js"
   ]
 }
