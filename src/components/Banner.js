@@ -10,7 +10,7 @@ export default function Banner() {
   const [loopRolesNum, setLoopRolesNum] = useState(0);
   //Controls whether text is being typed or deleted.
   const [isDeleting, setIsDeleteing] = useState(false);
-  const toRotate = ["Software Engineer", "Mobile Developer", "Web Developer"];
+  const toRotate = ["Software Engineer", "Mobile Developer", "Web Developer" ,"Frondend Developer" , "Backend Developer"];
   const [roles, setRoles] = useState("");
   //Controls typing speed (interval time in milliseconds).
   const [delta, setDelta] = useState(300 - Math.random() * 100);

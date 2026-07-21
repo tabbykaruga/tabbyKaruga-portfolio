@@ -6,6 +6,8 @@ import css from "../assets/img/skills/css.png";
 import html from "../assets/img/skills/html.png";
 import java from "../assets/img/skills/java.png";
 import php from "../assets/img/skills/php.png";
+import python from "../assets/img/skills/python.png";
+import django from "../assets/img/skills/django.png";
 import laravel from "../assets/img/skills/laravel.png";
 import psql from "../assets/img/skills/psql.png";
 import mysql from "../assets/img/skills/mysql.png";
@@ -20,6 +22,7 @@ import softclansLogo from "../assets/img/icons/softclans_logo.jpg";
 import gabsLogo from "../assets/img/icons/gabslogos.jpeg";
 import ticTacToe from "../assets/img/projects/tic-tac-toe.png";
 import investorApp from "../assets/img/projects/investor_calculator.png";
+import portfolio from "../assets/img/projects/portfolio.png";
 
 export const navLinks = [
   {
@@ -58,16 +61,24 @@ export const skills = [
     img: laravel,
   },
   {
+    name: "PHP",
+    img: php,
+  },
+  {
+    name: "Python",
+    img: python,
+  },
+  {
+    name: "Django",
+    img: django,
+  },
+  {
     name: "HTML",
     img: html,
   },
   {
     name: "CSS",
     img: css,
-  },
-  {
-    name: "PHP",
-    img: php,
   },
   {
     name: "Git",
@@ -118,6 +129,7 @@ export const myExperiences = [
       "BLoC",
       "Firebase",
       "React Js",
+      "Django",
       "Figma",
       "HTML",
       "CSS",
@@ -141,6 +153,9 @@ export const myExperiences = [
       "Flutter",
       "Extended JS",
       "Laravel",
+      "HTML",
+      "CSS",
+      "JavaScript",
       "Java",
       "PSQL",
       "Git",
@@ -162,6 +177,9 @@ export const myExperiences = [
       "Flutter",
       "Extended JS",
       "Laravel",
+      "HTML",
+      "CSS",
+      "JavaScript",
       "Java",
       "PSQL",
       "Git",
@@ -232,7 +250,7 @@ export const webAppProjects = [
     description: `A two-player functional Tic-Tac-Toe game.`,
     imgUrl: ticTacToe,
     stack: ["React JS", "HTML", "CSS", "Git"],
-    link: "https://github.com/tabbykaruga/tic-tac-toe-game-react-js",
+    link: "https://tabitha-karuga-tic-tac-toe-game.vercel.app/",
   },
   {
     name: "Investor Web App",
@@ -242,12 +260,12 @@ export const webAppProjects = [
     stack: ["React JS", "HTML", "CSS", "Git"],
     link: "https://github.com/tabbykaruga/investment-calculator",
   },
-  // {
-  //   name: "Portfolio",
-  //   description: `A personal portfolio platform designed to present my projects, skills, experience,
-  //    and professional identity, while also serving as a live demonstration of my technical abilities.`,
-  //   imgUrl: portfolio,
-  //   stack: ["React", "Git"],
-  //   link: "",
-  // },
+  {
+    name: "Portfolio",
+    description: `A personal portfolio platform designed to present my projects, skills, experience,
+     and professional identity, while also serving as a live demonstration of my technical abilities.`,
+    imgUrl: portfolio,
+    stack: ["React", "Django", "Python", "Git", "HTML", "CSS", "Vercel"],
+    link: "",
+  },
 ];

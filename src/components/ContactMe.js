@@ -1,7 +1,7 @@
 import { useState } from "react";
 import { Col, Container, Row } from "react-bootstrap";
 import ContactImg from "../assets/img/contact-img.svg";
-import emailjs from "@emailjs/browser";
+import { supabase } from "../supabaseClient";
 
 export default function ContactMe() {
   const formInitialDetails = {
@@ -11,6 +11,7 @@ export default function ContactMe() {
     phone: "",
     message: "",
   };
+
   const [formDetails, setFormDetails] = useState(formInitialDetails);
   const [status, setStatus] = useState({});
   const [showPopup, setShowPopup] = useState(false);
@@ -23,100 +24,59 @@ export default function ContactMe() {
     });
   };
 
-  //USING EMAILJS
-  const handleSubmit = (e) => {
+  const handleSubmit = async (e) => {
     e.preventDefault();
 
-    if (
-      !formDetails.firstName.trim() ||
-      !formDetails.email.trim() ||
-      !formDetails.message.trim()
-    ) {
-      setStatus({
-        success: false,
-        message: "Please fill in First Name, Email and Message.",
-      });
+    if (!formDetails.firstName.trim() || !formDetails.email.trim() || !formDetails.message.trim()) {
+      setStatus({ success: false, message: "Please fill in First Name, Email and Message." });
       setShowPopup(true);
-
       setTimeout(() => setShowPopup(false), 3000);
       return;
     }
 
     setIsLoading(true);
 
-    emailjs
-      .send(
-        process.env.REACT_APP_SERVICE_ID,
-        process.env.REACT_APP_TEMPLATE_ID,
-        {
-          name: `${formDetails.firstName} ${formDetails.lastName}`,
+    const { error } = await supabase.from("contact_messages").insert({
+      first_name: formDetails.firstName,
+      last_name: formDetails.lastName,
+      email: formDetails.email,
+      phone: formDetails.phone,
+      message: formDetails.message,
+    });
+
+    if (error) {
+      console.error(error);
+      setIsLoading(false);
+      setStatus({ success: false, message: "Failed to send message. Please try again." });
+      setShowPopup(true);
+      setTimeout(() => setShowPopup(false), 3000);
+      return;
+    }
+
+    // Insert succeeded — now trigger the email notification
+    const { error: fnError } = await supabase.functions.invoke("notify-contact", {
+      body: {
+        record: {
+          first_name: formDetails.firstName,
+          last_name: formDetails.lastName,
           email: formDetails.email,
           phone: formDetails.phone,
           message: formDetails.message,
         },
-        process.env.REACT_APP_PUBLIC_KEY,
-      )
-      .then(
-        () => {
-          setStatus({ success: true, message: "Message sent successfully!" });
-          setIsLoading(false);
-          setFormDetails(formInitialDetails);
-          setShowPopup(true);
+      },
+    });
 
-          //automatic close
-          setTimeout(() => setShowPopup(false), 3000);
-        },
-        (error) => {
-          console.error(error);
-          setStatus({
-            success: false,
-            message: "Failed to send message. Please try again.",
-          });
-          setIsLoading(false);
-          setShowPopup(true);
+    if (fnError) {
+      console.error("Email notification failed:", fnError);
+      // Don't block success message just because the email failed — data is saved either way
+    }
 
-          //automatic close
-          setTimeout(() => setShowPopup(false), 3000);
-        },
-      );
+    setIsLoading(false);
+    setStatus({ success: true, message: "Message sent successfully!" });
+    setFormDetails(formInitialDetails);
+    setShowPopup(true);
+    setTimeout(() => setShowPopup(false), 3000);
   };
-
-  //FOR THE BACKEND USING SERVER.JS
-  // const handleSubmit = async (e) => {
-  //   e.preventDefault();
-  //   setIsLoading(true);
-
-  //   try {
-  //     const response = await fetch("http://localhost:5000/api/contact", {
-  //       method: "POST",
-  //       headers: {
-  //         "Content-Type": "application/json",
-  //       },
-  //       body: JSON.stringify(formDetails),
-  //     });
-
-  //     const result = await response.json();
-
-  //     setIsLoading(false);
-  //     setFormDetails(formInitialDetails);
-
-  //     if (response.ok) {
-  //       setStatus({ success: true, message: "Message sent successfully!" });
-  //     } else {
-  //       setStatus({
-  //         success: false,
-  //         message: result.message || "Oops! Something went wrong.",
-  //       });
-  //     }
-  //   } catch (error) {
-  //     console.error(error);
-  //     setIsLoading(false);
-  //     setStatus({
-  //       success: false,
-  //       message: "Error sending message. Please try again later.",
-  //     });
-  //   }
-  // };
 
   return (
     <section className="contact" id="contact">
